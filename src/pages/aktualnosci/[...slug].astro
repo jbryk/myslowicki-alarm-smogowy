@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('aktualnosci');
+  return posts.map((p) => ({ params: { slug: p.slug }, props: { post: p } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={post.data.tytul} description={post.data.opis}>
+  <article class="section">
+    <div class="container prose">
+      <a class="back" href="/aktualnosci/">← Aktualności</a>
+      <span class="eyebrow">{fmt(post.data.data)}</span>
+      <h1>{post.data.tytul}</h1>
+      <Content />
+    </div>
+  </article>
+</Base>
+
+<style>
+  .back { display: inline-block; margin-bottom: 1rem; color: var(--text-muted); font-size: 0.9rem; }
+  .prose :global(blockquote) { border-left: 3px solid var(--border); margin: 1.2rem 0; padding: 0.4rem 1rem; color: var(--text-muted); font-style: italic; }
+</style>

@@ -1,0 +1,62 @@
+---
+import Base from '../layouts/Base.astro';
+
+const zespol = [
+  { imie: 'Jerzy Bryk', rola: 'Współzałożyciel i rzecznik', opis: 'Reprezentuje MAS publicznie: wystąpienia na sesjach Rady Miasta, kontakt z mediami, analizy i petycje.' },
+  { imie: 'Piotr Grabowski', rola: 'Współzałożyciel', opis: 'Współtworzył m.in. mysłowicką mapę kominów i działania organizacyjne grupy.' },
+  { imie: 'Aleksandra Nowicka', rola: 'Działaczka MAS', opis: 'Zaangażowana w bieżące działania ruchu na rzecz czystego powietrza w Mysłowicach.' },
+];
+---
+<Base title="O nas" description="Mysłowicki Alarm Smogowy — oddolny, bezpartyjny ruch mieszkańców Mysłowic na rzecz czystego powietrza, działający od 2017 roku.">
+  <section class="section">
+    <div class="container prose">
+      <span class="eyebrow">O nas</span>
+      <h1>Kim jesteśmy</h1>
+      <p class="lead">Mysłowicki Alarm Smogowy to oddolny, nieformalny i bezpartyjny ruch mieszkańców Mysłowic, którzy nie godzą się na życie w smogu.</p>
+      <p>Działamy od <strong>10 stycznia 2017 roku</strong> i od początku należymy do ogólnopolskiej sieci <strong>Polskiego Alarmu Smogowego</strong>. Pracujemy społecznie — własny czas i prywatne środki przeznaczamy na to, by w naszym mieście dało się normalnie oddychać. Nie reprezentujemy żadnej partii ani żadnego urzędu. Łączy nas jeden cel: czyste powietrze w Mysłowicach.</p>
+
+      <h2>Co robimy</h2>
+      <ul>
+        <li><strong>Patrzymy władzom na ręce</strong> — analizujemy dane, składamy wnioski o informację publiczną, petycje i wystąpienia na sesjach Rady Miasta.</li>
+        <li><strong>Edukujemy</strong> — programy i materiały dla szkół oraz mieszkańców.</li>
+        <li><strong>Mierzymy i nagłaśniamy</strong> — wspieramy sieć pyłomierzy i informujemy o jakości powietrza.</li>
+        <li><strong>Współpracujemy</strong> — z radami dzielnic, organizacjami i środowiskiem naukowym.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <span class="eyebrow">Zespół</span>
+      <h2>Działamy w tym składzie</h2>
+      <div class="grid grid--3">
+        {zespol.map((o) => (
+          <div class="card person">
+            <div class="avatar" aria-hidden="true">{o.imie.split(' ').map((n) => n[0]).join('')}</div>
+            <h3>{o.imie}</h3>
+            <p class="rola">{o.rola}</p>
+            <p>{o.opis}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container prose">
+      <h2>Podziękowania</h2>
+      <p>Za zaangażowanie w początki Mysłowickiego Alarmu Smogowego dziękujemy osobom, które współtworzyły ruch u jego zarania — m.in. <strong>Jackowi Paszkowi</strong>, <strong>Andrzejowi Hermanowi</strong> i <strong>Andrzejowi Rytowi</strong>.</p>
+
+      <h2>Współpraca</h2>
+      <p>Działamy w sieci <a href="https://polskialarmsmogowy.pl" target="_blank" rel="noopener">Polskiego Alarmu Smogowego</a> i współpracujemy m.in. z Katowickim Alarmem Smogowym, radami dzielnic oraz lokalnymi stowarzyszeniami.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .person { text-align: left; }
+  .avatar { width: 54px; height: 54px; border-radius: 50%; background: var(--bg-blue-soft); color: var(--blue); display: grid; place-items: center; font-weight: 700; font-size: 1.1rem; margin-bottom: 0.7rem; }
+  .person h3 { margin: 0; }
+  .rola { color: var(--blue); font-weight: 600; font-size: 0.92rem; margin: 0.1rem 0 0.5rem; }
+  .person p:last-child { color: var(--text-muted); margin: 0; }
+</style>

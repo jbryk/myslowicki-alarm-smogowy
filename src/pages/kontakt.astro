@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base title="Kontakt" description="Skontaktuj się z Mysłowickim Alarmem Smogowym — napisz do nas lub zgłoś problem ze smogiem.">
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Kontakt</span>
+      <h1>Napisz do nas</h1>
+      <p class="lead">Masz pytanie, pomysł albo chcesz dołączyć? Napisz — odpowiadamy osobiście.</p>
+
+      <div class="kontakt-grid">
+        <form class="card form" id="kontakt-form">
+          <label>Imię<input type="text" name="imie" required autocomplete="name" /></label>
+          <label>E-mail<input type="email" name="email" required autocomplete="email" /></label>
+          <label>Wiadomość<textarea name="tresc" rows="6" required></textarea></label>
+          <button class="btn btn--primary" type="submit">Wyślij wiadomość</button>
+          <p class="form-note">Przycisk otworzy Twój program pocztowy z gotową wiadomością do nas.</p>
+        </form>
+
+        <aside class="card kontakt-info">
+          <h3>Bezpośrednio</h3>
+          <p><a href="mailto:myslowicki.smog@gmail.com">myslowicki.smog@gmail.com</a></p>
+          <p><a href="https://www.facebook.com/myslowicki.alarm.smogowy" target="_blank" rel="noopener">Facebook — Mysłowicki Alarm Smogowy</a></p>
+          <h3>Zgłoś smog</h3>
+          <p>Spalanie odpadów lub kopcący komin zgłoś Straży Miejskiej w Mysłowicach — tel. <strong>986</strong>. Jak to zrobić: <a href="/dla-mieszkanca/">poradnik dla mieszkańca</a>.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .kontakt-grid { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
+  @media (min-width: 800px) { .kontakt-grid { grid-template-columns: 1.4fr 1fr; } }
+  .form { display: flex; flex-direction: column; gap: 0.9rem; }
+  .form label { display: flex; flex-direction: column; gap: 0.3rem; font-weight: 600; font-size: 0.92rem; color: var(--navy); }
+  .form input, .form textarea { font: inherit; padding: 0.65rem 0.8rem; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--bg-soft); }
+  .form input:focus, .form textarea:focus { outline: 2px solid var(--blue); border-color: var(--blue); }
+  .form button { align-self: flex-start; }
+  .form-note { font-size: 0.82rem; color: var(--text-muted); margin: 0; }
+  .kontakt-info h3 { margin: 0 0 0.3rem; }
+  .kontakt-info h3 + p { margin-top: 0; }
+  .kontakt-info { align-self: start; }
+</style>
+
+<script>
+  const form = document.getElementById('kontakt-form') as HTMLFormElement | null;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const imie = String(fd.get('imie') || '');
+    const email = String(fd.get('email') || '');
+    const tresc = String(fd.get('tresc') || '');
+    const subject = encodeURIComponent(`Wiadomość ze strony — ${imie}`);
+    const body = encodeURIComponent(`${tresc}\n\n— ${imie} (${email})`);
+    window.location.href = `mailto:myslowicki.smog@gmail.com?subject=${subject}&body=${body}`;
+  });
+</script>

@@ -1,0 +1,52 @@
+---
+import Base from '../layouts/Base.astro';
+import { wydarzenia } from '../data/timeline';
+
+const lata = [...new Set(wydarzenia.map((w) => w.rok))];
+const katKolor: Record<string, string> = {
+  Start: 'var(--blue)', Petycja: 'var(--magenta)', Spotkanie: 'var(--navy)',
+  Edukacja: 'var(--green)', Pomiary: 'var(--blue)', Akcja: 'var(--yellow)',
+  Współpraca: 'var(--navy)', Media: 'var(--text-muted)',
+};
+---
+<Base title="Historia i działania" description="Oś czasu Mysłowickiego Alarmu Smogowego 2017–2026: petycje, spotkania, edukacja, pomiary i akcje na rzecz czystego powietrza.">
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Historia i działania</span>
+      <h1>Oś czasu 2017–2026</h1>
+      <p class="lead">Niemal dekada pracy na rzecz czystego powietrza w Mysłowicach — od pierwszej grupy mieszkańców po twarde dane i konkretne efekty.</p>
+
+      {lata.map((rok) => (
+        <div class="rok-block">
+          <h2 class="rok">{rok}</h2>
+          <ul class="events">
+            {wydarzenia.filter((w) => w.rok === rok).map((w) => (
+              <li class="event">
+                <span class="kat" style={`--c:${katKolor[w.kat]}`}>{w.kat}</span>
+                <div>
+                  <div class="event-head"><strong>{w.tytul}</strong> <span class="data">{w.data}</span></div>
+                  <p>{w.opis}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+
+      <p class="note">Wybrane wydarzenia. Pełna dokumentacja działań, petycje i raporty — w naszych zasobach i na profilu <a href="https://www.facebook.com/myslowicki.alarm.smogowy" target="_blank" rel="noopener">Facebook</a>.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .rok-block { margin-top: 2.2rem; }
+  .rok { display: inline-block; font-size: 1.6rem; color: var(--blue); border-bottom: 3px solid var(--green); padding-bottom: 0.2rem; }
+  .events { list-style: none; padding: 0; margin: 1rem 0 0; display: grid; gap: 0.9rem; }
+  .event { display: grid; grid-template-columns: 110px 1fr; gap: 1rem; align-items: start; }
+  .kat { font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: #fff; background: var(--c); border-radius: 999px; padding: 0.2rem 0.6rem; text-align: center; align-self: start; margin-top: 0.15rem; }
+  .event-head { line-height: 1.4; }
+  .event .data { color: var(--text-muted); font-size: 0.85rem; }
+  .event p { margin: 0.2rem 0 0; color: var(--text-muted); }
+  .note { margin-top: 2.5rem; color: var(--text-muted); font-size: 0.9rem; }
+  @media (max-width: 560px) { .event { grid-template-columns: 1fr; gap: 0.3rem; } }
+</style>

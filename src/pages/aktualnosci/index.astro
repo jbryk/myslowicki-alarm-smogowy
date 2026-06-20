@@ -1,0 +1,34 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('aktualnosci'))
+  .sort((a, b) => b.data.data.valueOf() - a.data.data.valueOf());
+const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title="Aktualności" description="Najnowsze działania i komunikaty Mysłowickiego Alarmu Smogowego.">
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Aktualności</span>
+      <h1>Co u nas słychać</h1>
+      <div class="grid grid--2" style="margin-top:1.5rem">
+        {posts.map((p) => (
+          <a class="card news" href={`/aktualnosci/${p.slug}/`}>
+            <time>{fmt(p.data.data)}</time>
+            <h3>{p.data.tytul}</h3>
+            {p.data.opis && <p>{p.data.opis}</p>}
+            <span class="more">Czytaj dalej →</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .news time { font-size: 0.82rem; color: var(--text-muted); }
+  .news h3 { margin: 0.3rem 0; }
+  .news p { color: var(--text-muted); }
+  .news .more { color: var(--blue); font-weight: 600; font-size: 0.9rem; }
+  .news:hover { text-decoration: none; border-color: var(--blue); }
+</style>

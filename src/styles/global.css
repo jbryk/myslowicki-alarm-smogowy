@@ -1,0 +1,100 @@
+:root {
+  /* paleta miasta Mysłowice */
+  --blue: #0F75BC;
+  --blue-dark: #0c5e98;
+  --green: #43B649;
+  --green-dark: #2f8a35;
+  --magenta: #E6007E;
+  --yellow: #F7C400;
+  --navy: #10314F;
+
+  --text: #14222e;
+  --text-muted: #5b6b78;
+  --bg: #ffffff;
+  --bg-soft: #f4f7fa;
+  --bg-blue-soft: #eaf3fb;
+  --border: #e2e8ee;
+
+  --maxw: 1080px;
+  --radius: 14px;
+  --radius-sm: 9px;
+  --shadow: 0 6px 24px rgba(16, 49, 79, 0.08);
+  --font: 'Inter', system-ui, 'Segoe UI', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { line-height: 1.2; color: var(--navy); font-weight: 700; }
+h1 { font-size: clamp(1.9rem, 5vw, 3rem); letter-spacing: -0.02em; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2.1rem); letter-spacing: -0.01em; }
+h3 { font-size: 1.2rem; }
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+p { margin: 0 0 1rem; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 1.25rem; }
+
+.section { padding: clamp(2.5rem, 6vw, 4.5rem) 0; }
+.section--soft { background: var(--bg-soft); }
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--blue); margin-bottom: 0.5rem;
+}
+
+.lead { font-size: 1.15rem; color: var(--text-muted); max-width: 60ch; }
+
+.btn {
+  display: inline-block; padding: 0.7rem 1.3rem; border-radius: 999px;
+  font-weight: 600; font-size: 0.98rem; cursor: pointer; border: 2px solid transparent;
+  transition: transform 0.08s ease, background 0.15s ease;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn--primary { background: var(--blue); color: #fff; }
+.btn--primary:hover { background: var(--blue-dark); }
+.btn--ghost { background: transparent; color: var(--navy); border-color: var(--border); }
+.btn--ghost:hover { border-color: var(--blue); color: var(--blue); }
+
+.grid { display: grid; gap: 1.25rem; }
+@media (min-width: 700px) { .grid--3 { grid-template-columns: repeat(3, 1fr); } .grid--2 { grid-template-columns: repeat(2, 1fr); } }
+
+.card {
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 1.4rem; box-shadow: var(--shadow);
+}
+.card h3 { margin-top: 0; }
+
+/* akcent górny w kolorach miasta */
+.accent-bar { height: 6px; display: flex; }
+.accent-bar i { flex: 1; }
+.accent-bar i:nth-child(1){ background: var(--blue); }
+.accent-bar i:nth-child(2){ background: var(--green); }
+.accent-bar i:nth-child(3){ background: var(--magenta); }
+.accent-bar i:nth-child(4){ background: var(--yellow); }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+.prose { max-width: 68ch; }
+.prose h2 { margin-top: 2.2rem; }
+.prose ul { padding-left: 1.2rem; }
+.prose li { margin-bottom: 0.4rem; }

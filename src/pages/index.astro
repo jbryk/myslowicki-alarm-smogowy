@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import AirQuality from '../components/AirQuality.astro';
+import { kamienie } from '../data/timeline';
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('aktualnosci'))
+  .sort((a, b) => b.data.data.valueOf() - a.data.data.valueOf())
+  .slice(0, 3);
+const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base>
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow">Mysłowice · od 2017 roku</span>
+      <h1>Razem o czyste powietrze w Mysłowicach</h1>
+      <p class="lead">Jesteśmy oddolnym, bezpartyjnym ruchem mieszkańców. Patrzymy władzom na ręce, edukujemy i walczymy o to, by w naszym mieście dało się normalnie oddychać.</p>
+      <div class="hero-cta">
+        <a class="btn btn--primary" href="/o-nas/">Poznaj nas</a>
+        <a class="btn btn--ghost" href="/dla-mieszkanca/">Dla mieszkańca</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><AirQuality /></div>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Nasza historia</span>
+      <h2>Kamienie milowe 2017–2026</h2>
+      <ol class="tl">
+        {kamienie.map((w) => (
+          <li class="tl-item">
+            <span class="tl-year">{w.rok}</span>
+            <div class="tl-body">
+              <h3>{w.tytul}</h3>
+              <p>{w.opis}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+      <a class="btn btn--ghost" href="/historia/">Zobacz pełną oś czasu</a>
+    </div>
+  </section>
+
+  <section class="section section--soft">
+    <div class="container">
+      <span class="eyebrow">Co robimy</span>
+      <h2>Cztery filary działania</h2>
+      <div class="grid grid--2">
+        <div class="card"><h3>Patrzymy na ręce</h3><p>Analizujemy dane, składamy wnioski o informację publiczną, petycje i wystąpienia na sesjach Rady Miasta.</p></div>
+        <div class="card"><h3>Edukujemy</h3><p>Programy i materiały dla szkół oraz mieszkańców — o smogu, niskiej emisji i sposobach jej ograniczania.</p></div>
+        <div class="card"><h3>Mierzymy i nagłaśniamy</h3><p>Wspieramy lokalne pyłomierze i informujemy o stanie powietrza, gdy oficjalnych stacji brakuje.</p></div>
+        <div class="card"><h3>Współpracujemy</h3><p>Z radami dzielnic, organizacjami i nauką, w sieci Polskiego Alarmu Smogowego.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <span class="eyebrow">Aktualności</span>
+      <h2>Co u nas słychać</h2>
+      <div class="grid grid--3">
+        {posts.map((p) => (
+          <a class="card news" href={`/aktualnosci/${p.slug}/`}>
+            <time>{fmt(p.data.data)}</time>
+            <h3>{p.data.tytul}</h3>
+            {p.data.opis && <p>{p.data.opis}</p>}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .hero { background: linear-gradient(180deg, var(--bg-blue-soft), #fff); padding: clamp(2.5rem, 7vw, 5rem) 0 2rem; }
+  .hero-cta { display: flex; gap: 0.7rem; flex-wrap: wrap; margin-top: 1.5rem; }
+
+  .tl { list-style: none; margin: 1.5rem 0; padding: 0; display: grid; gap: 0; }
+  .tl-item { display: grid; grid-template-columns: 70px 1fr; gap: 1rem; padding: 0.4rem 0 1.3rem; position: relative; }
+  .tl-item::before { content: ''; position: absolute; left: 78px; top: 1.6rem; bottom: -0.2rem; width: 2px; background: var(--border); }
+  .tl-item:last-child::before { display: none; }
+  .tl-year { font-weight: 700; color: var(--blue); position: relative; }
+  .tl-year::after { content: ''; position: absolute; right: -9px; top: 0.35rem; width: 12px; height: 12px; border-radius: 50%; background: var(--green); border: 2px solid #fff; }
+  .tl-body h3 { margin: 0 0 0.25rem; }
+  .tl-body p { margin: 0; color: var(--text-muted); }
+
+  .news time { font-size: 0.82rem; color: var(--text-muted); }
+  .news h3 { margin: 0.3rem 0; }
+  .news:hover { text-decoration: none; border-color: var(--blue); }
+</style>

@@ -1,0 +1,39 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="container ft">
+    <div class="ft-brand">
+      <img src="/logo-poziomy-white.svg" alt="Mysłowicki Alarm Smogowy" width="220" height="57" />
+      <p>Oddolny, bezpartyjny ruch mieszkańców Mysłowic na rzecz czystego powietrza. Działamy od 2017 roku w sieci Polskiego Alarmu Smogowego.</p>
+    </div>
+    <nav class="ft-nav" aria-label="Stopka">
+      <a href="/o-nas/">O nas</a>
+      <a href="/historia/">Historia</a>
+      <a href="/dla-mieszkanca/">Dla mieszkańca</a>
+      <a href="/aktualnosci/">Aktualności</a>
+      <a href="/kontakt/">Kontakt</a>
+    </nav>
+    <div class="ft-contact">
+      <a href="mailto:myslowicki.smog@gmail.com">myslowicki.smog@gmail.com</a>
+      <a href="https://www.facebook.com/myslowicki.alarm.smogowy" rel="noopener" target="_blank">Facebook</a>
+      <a href="https://polskialarmsmogowy.pl" rel="noopener" target="_blank">Polski Alarm Smogowy</a>
+    </div>
+  </div>
+  <div class="container ft-note">
+    <p>Inicjatywa obywatelska, niezwiązana z Urzędem Miasta Mysłowice. © {year} Mysłowicki Alarm Smogowy.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer { background: var(--navy); color: #cdd9e3; margin-top: 2rem; }
+  .ft { display: grid; gap: 1.8rem; padding: 3rem 1.25rem 1.5rem; }
+  .ft-brand img { height: 50px; width: auto; margin-bottom: 0.8rem; }
+  .ft-brand p { max-width: 42ch; color: #aab8c4; font-size: 0.95rem; }
+  .ft-nav, .ft-contact { display: flex; flex-direction: column; gap: 0.5rem; }
+  .site-footer a { color: #cdd9e3; }
+  .site-footer a:hover { color: #fff; }
+  .ft-note { border-top: 1px solid rgba(255,255,255,0.12); padding: 1rem 1.25rem 2rem; }
+  .ft-note p { color: #8ea0ae; font-size: 0.86rem; margin: 0; }
+  @media (min-width: 800px) { .ft { grid-template-columns: 2fr 1fr 1.3fr; } }
+</style>

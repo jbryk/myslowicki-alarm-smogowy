@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 140" role="img" aria-label="Mysłowicki Alarm Smogowy — razem o czyste powietrze (na ciemnym tle)">
+  <g transform="translate(8,16) scale(0.82)">
+    <polygon points="76,10 45,59 107,59" fill="#2E9BE0"/>
+    <polygon points="41,66 10,115 72,115" fill="#F7C400"/>
+    <polygon points="111,66 80,115 142,115" fill="#E6007E"/>
+    <polygon points="45,65 107,65 76,114" fill="#43B649"/>
+  </g>
+  <g font-family="'Inter','Segoe UI',Arial,sans-serif">
+    <text x="160" y="56" font-size="22" font-weight="600" letter-spacing="5" fill="#7CC4F0">MYSŁOWICKI</text>
+    <text x="158" y="98" font-size="43" font-weight="700" fill="#FFFFFF">Alarm Smogowy</text>
+    <text x="160" y="121" font-size="13" font-weight="400" letter-spacing="3.5" fill="#B8C4CE">RAZEM O CZYSTE POWIETRZE</text>
+  </g>
+</svg>
