@@ -2,14 +2,23 @@
 // Agreguje jakość powietrza: GIOŚ (bez klucza) + Airly + LookO2 + Syngeos (env-key).
 
 const MYS = { lat: 50.2074, lng: 19.1374 };
-const BBOX = { latMin: 50.13, latMax: 50.29, lngMin: 19.05, lngMax: 19.30 };
+// Szerszy obszar (~12 km) — Mysłowice i sąsiednie gminy
+const BBOX = { latMin: 50.10, latMax: 50.32, lngMin: 18.97, lngMax: 19.31 };
 
 const GIOS_STACJE = [
   { id: 17318, nazwa: 'Katowice, ul. Dudy-Gracza', lat: 50.258483, lng: 19.036217 },
   { id: 837, nazwa: 'Sosnowiec, ul. Lubelska', lat: 50.285956, lng: 19.184399 },
   { id: 814, nazwa: 'Katowice, ul. Kossutha', lat: 50.264611, lng: 18.975028 },
   { id: 841, nazwa: 'Tychy, ul. Tołstoja', lat: 50.099903, lng: 18.990236 },
+  { id: 805, nazwa: 'Dąbrowa Górnicza, ul. Tysiąclecia', lat: 50.329111, lng: 19.231222 },
 ];
+
+function dist(lat, lng) {
+  const R = 6371, p = Math.PI / 180;
+  const h = 0.5 - Math.cos((lat - MYS.lat) * p) / 2 +
+    Math.cos(MYS.lat * p) * Math.cos(lat * p) * (1 - Math.cos((lng - MYS.lng) * p)) / 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
 const GIOS_KOLOR = ['#57b108', '#b0dd10', '#ffd911', '#e58100', '#e50000', '#990000'];
 
 function pick(o, ...keys) {
@@ -60,8 +69,10 @@ async function pobierzAirly() {
   if (!key) return [];
   const headers = { apikey: key, Accept: 'application/json' };
   try {
+    // Airly ma limit ~100 zapytań/dobę (1 + po jednym na czujnik), więc trzymamy
+    // mały zasięg i niewielki cap; gęstość mapy zapewniają GIOŚ i Syngeos.
     const inst = await fetch(
-      `https://airapi.airly.eu/v2/installations/nearest?lat=${MYS.lat}&lng=${MYS.lng}&maxDistanceKM=6&maxResults=12`,
+      `https://airapi.airly.eu/v2/installations/nearest?lat=${MYS.lat}&lng=${MYS.lng}&maxDistanceKM=8&maxResults=6`,
       { headers }
     );
     if (!inst.ok) return [];
@@ -134,7 +145,8 @@ async function pobierzSyngeos() {
         return Array.isArray(c) && c.length === 2 &&
           c[0] >= BBOX.latMin && c[0] <= BBOX.latMax && c[1] >= BBOX.lngMin && c[1] <= BBOX.lngMax;
       })
-      .slice(0, 12);
+      .sort((a, b) => dist(a.coordinates[0], a.coordinates[1]) - dist(b.coordinates[0], b.coordinates[1]))
+      .slice(0, 20);
     const punkty = await Promise.all(
       inBox.map(async (dev) => {
         try {
@@ -169,6 +181,8 @@ export default async function handler(req, res) {
   ]);
   const punkty = [...gios, ...airly, ...looko2, ...syngeos];
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
-  res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=600');
+  // CDN cache 2h, odświeżanie w tle — chroni limit Airly (~100 zapytań/dobę):
+  // ~12 odświeżeń/dobę × (1 + do 6 czujników Airly) = bezpiecznie poniżej limitu.
+  res.setHeader('Cache-Control', 'public, s-maxage=7200, stale-while-revalidate=1800');
   res.status(200).send(JSON.stringify({ punkty }));
 }
