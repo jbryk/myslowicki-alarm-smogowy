@@ -54,7 +54,7 @@
         .then(function (data) {
           var pkt = (data && data.punkty) || [];
           var info = document.getElementById('mapa-info');
-          var liczba = { 'GIOŚ': 0, 'Airly': 0, 'Syngeos': 0 };
+          var liczba = { 'GIOŚ': 0, 'Airly': 0, 'Syngeos': 0, 'LookO2': 0 };
           var grupa = [];
           pkt.forEach(function (p) {
             if (typeof p.lat !== 'number' || typeof p.lng !== 'number') return;
@@ -83,10 +83,11 @@
             var parts = [];
             if (liczba['GIOŚ']) parts.push(liczba['GIOŚ'] + ' GIOŚ');
             if (liczba['Airly']) parts.push(liczba['Airly'] + ' Airly');
+            if (liczba['LookO2']) parts.push(liczba['LookO2'] + ' LookO2');
             if (liczba['Syngeos']) parts.push(liczba['Syngeos'] + ' Syngeos');
             var txt = parts.length ? 'Punkty pomiarowe: ' + parts.join(' · ') + '.' : 'Brak danych do wyświetlenia.';
-            if (!liczba['Airly'] && !liczba['Syngeos']) {
-              txt += ' Lokalne pyłomierze Airly i Syngeos pojawią się po skonfigurowaniu kluczy API.';
+            if (!liczba['Airly'] && !liczba['Syngeos'] && !liczba['LookO2']) {
+              txt += ' Lokalne pyłomierze (Airly, LookO2, Syngeos) pojawią się po skonfigurowaniu kluczy API.';
             }
             info.textContent = txt;
           }

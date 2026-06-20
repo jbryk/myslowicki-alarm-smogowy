@@ -16,8 +16,23 @@ const GIOS_STACJE = [
 // Kolory indeksu GIOŚ wg poziomu (0–5)
 const GIOS_KOLOR = ['#57b108', '#b0dd10', '#ffd911', '#e58100', '#e50000', '#990000'];
 
+// Zgrubny prostokąt obejmujący Mysłowice (filtr czujników)
+const BBOX = { latMin: 50.13, latMax: 50.29, lngMin: 19.05, lngMax: 19.30 };
+
+function pick(o: any, ...keys: string[]) {
+  if (!o) return undefined;
+  const lower: Record<string, any> = {};
+  for (const k of Object.keys(o)) lower[k.toLowerCase()] = o[k];
+  for (const k of keys) if (lower[k.toLowerCase()] !== undefined) return lower[k.toLowerCase()];
+  return undefined;
+}
+const liczba = (v: any): number | null => {
+  const n = parseFloat(v);
+  return Number.isFinite(n) ? n : null;
+};
+
 type Punkt = {
-  zrodlo: 'GIOŚ' | 'Airly' | 'Syngeos';
+  zrodlo: 'GIOŚ' | 'Airly' | 'Syngeos' | 'LookO2';
   nazwa: string;
   lat: number;
   lng: number;
@@ -116,13 +131,48 @@ async function pobierzSyngeos(): Promise<Punkt[]> {
   return [];
 }
 
+async function pobierzLooko2(): Promise<Punkt[]> {
+  const token = import.meta.env.LOOKO2_TOKEN ?? process.env.LOOKO2_TOKEN;
+  if (!token) return [];
+  try {
+    const r = await fetch(`http://api.looko2.com/?method=GetAll&token=${token}`);
+    if (!r.ok) return [];
+    const arr: any[] = await r.json();
+    if (!Array.isArray(arr)) return [];
+    const out: Punkt[] = [];
+    for (const d of arr) {
+      const lat = liczba(pick(d, 'Lat', 'Latitude', 'lat'));
+      const lng = liczba(pick(d, 'Lon', 'Lng', 'Longitude', 'lon'));
+      if (lat == null || lng == null) continue;
+      if (lat < BBOX.latMin || lat > BBOX.latMax || lng < BBOX.lngMin || lng > BBOX.lngMax) continue;
+      const ijp = liczba(pick(d, 'IJP'));
+      const kolor = pick(d, 'Color', 'Kolor') ||
+        (ijp != null && ijp >= 0 && ijp <= 5 ? GIOS_KOLOR[ijp] : '#9aa7b0');
+      out.push({
+        zrodlo: 'LookO2',
+        nazwa: String(pick(d, 'Name', 'Device') || 'Czujnik LookO2'),
+        lat, lng,
+        indeks: (pick(d, 'IJPString', 'IJPDescription') as string) ?? null,
+        kolor,
+        pm10: liczba(pick(d, 'PM10')),
+        pm25: liczba(pick(d, 'PM25', 'PM2.5')),
+        url: 'https://looko2.com/',
+      });
+    }
+    return out;
+  } catch {
+    return [];
+  }
+}
+
 export const GET: APIRoute = async () => {
-  const [gios, airly, syngeos] = await Promise.all([
+  const [gios, airly, syngeos, looko2] = await Promise.all([
     pobierzGios(),
     pobierzAirly(),
     pobierzSyngeos(),
+    pobierzLooko2(),
   ]);
-  const punkty = [...gios, ...airly, ...syngeos];
+  const punkty = [...gios, ...airly, ...syngeos, ...looko2];
   return new Response(JSON.stringify({ punkty, czas: '' }), {
     headers: {
       'Content-Type': 'application/json; charset=utf-8',
