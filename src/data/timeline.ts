@@ -34,7 +34,7 @@ export const wydarzenia: Wydarzenie[] = [
   { rok: '2024', data: '14 października 2024', tytul: 'Mniej kopciuchów: 617', opis: 'Liczba pozaklasowych kotłów spada z ok. 5–6 tys. (2018) do 617 (dane z informacji publicznej).', kat: 'Pomiary', kamien: true },
   { rok: '2025', data: '1 lutego 2025', tytul: 'Bilans ośmiu lat', opis: 'Obszerne podsumowanie działań antysmogowych: dane, kontrole, ocena działań władz miasta.', kat: 'Media', kamien: true },
   { rok: '2026', data: 'styczeń 2026', tytul: 'Silny epizod smogowy', opis: 'Przekroczenia norm w Mysłowicach; nagłośnienie problemu wyłączania pyłomierzy przez miasto.', kat: 'Media' },
-  { rok: '2026', data: '15 kwietnia 2026', tytul: 'Konferencja o jakości powietrza', opis: 'Konferencja w ramach projektu Stop Smog — pokazała skalę problemu w mieście.', kat: 'Spotkanie', kamien: true },
+  { rok: '2026', data: '15 kwietnia 2026', tytul: 'Konferencja „Smogowi mówimy NIE!”', opis: 'Finał akcji edukacyjnej w ramach grantu „Nasze powietrze”: naukowcy, samorząd i młodzież razem o czystym powietrzu.', kat: 'Spotkanie', kamien: true },
   { rok: '2026', data: '2026', tytul: 'Nowa strona internetowa', opis: 'Uruchomienie domeny myslowicki-alarm-smogowy.pl i nowoczesnej strony ruchu.', kat: 'Start' },
 ];
 

@@ -98,3 +98,7 @@ img { max-width: 100%; height: auto; display: block; }
 .prose h2 { margin-top: 2.2rem; }
 .prose ul { padding-left: 1.2rem; }
 .prose li { margin-bottom: 0.4rem; }
+
+/* responsywne osadzenie YouTube */
+.yt { position: relative; padding-bottom: 56.25%; height: 0; margin: 1rem 0 1.5rem; border-radius: var(--radius); overflow: hidden; background: #000; }
+.yt iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
