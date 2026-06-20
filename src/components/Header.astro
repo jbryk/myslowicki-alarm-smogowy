@@ -28,7 +28,8 @@ const path = Astro.url.pathname;
 <style>
   .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
   .hd { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-top: 0.6rem; padding-bottom: 0.6rem; }
-  .brand img { height: 46px; width: auto; }
+  .brand img { height: 60px; width: auto; display: block; }
+  @media (max-width: 480px) { .brand img { height: 46px; } }
   .nav { display: flex; gap: 0.3rem; flex-wrap: wrap; }
   .nav a { padding: 0.5rem 0.8rem; border-radius: 999px; font-weight: 500; font-size: 0.95rem; color: var(--navy); }
   .nav a:hover { background: var(--bg-blue-soft); text-decoration: none; }
