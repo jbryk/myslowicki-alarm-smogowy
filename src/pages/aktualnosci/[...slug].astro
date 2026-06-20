@@ -15,9 +15,13 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
   <article class="section">
     <div class="container prose">
       <a class="back" href="/aktualnosci/">← Aktualności</a>
-      <span class="eyebrow">{fmt(post.data.data)}</span>
-      <h1>{post.data.tytul}</h1>
-      {post.data.obraz && <img class="cover" src={post.data.obraz} alt="" width="800" height="400" />}
+      <div class="art-head">
+        {post.data.obraz && <img class="art-thumb" src={post.data.obraz} alt="" width="200" height="200" />}
+        <div>
+          <span class="eyebrow">{fmt(post.data.data)}</span>
+          <h1>{post.data.tytul}</h1>
+        </div>
+      </div>
       <Content />
     </div>
   </article>
@@ -25,6 +29,8 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
 
 <style>
   .back { display: inline-block; margin-bottom: 1rem; color: var(--text-muted); font-size: 0.9rem; }
-  .cover { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: var(--radius); margin: 0.6rem 0 1.6rem; background: var(--bg-blue-soft); }
+  .art-head { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.4rem; }
+  .art-thumb { width: 76px; height: 76px; flex: none; border-radius: 14px; object-fit: cover; background: var(--bg-blue-soft); }
+  .art-head h1 { margin: 0.2rem 0 0; }
   .prose :global(blockquote) { border-left: 3px solid var(--border); margin: 1.2rem 0; padding: 0.4rem 1rem; color: var(--text-muted); font-style: italic; }
 </style>

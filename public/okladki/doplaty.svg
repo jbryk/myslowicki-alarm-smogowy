@@ -1,24 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Dofinansowanie wymiany ogrzewania">
-  <rect width="800" height="400" fill="#EAF3FB"/>
-  <rect y="320" width="800" height="80" fill="#dbe8f5"/>
-  <!-- dom -->
-  <rect x="250" y="200" width="180" height="130" fill="#ffffff" stroke="#10314F" stroke-width="4"/>
-  <polygon points="240,200 340,128 440,200" fill="#0F75BC"/>
-  <rect x="300" y="250" width="50" height="80" fill="#BFE6FA" stroke="#10314F" stroke-width="3"/>
-  <!-- liść / czysta energia -->
-  <path d="M360 175 C 360 150 392 142 410 150 C 402 178 380 186 360 175 Z" fill="#43B649"/>
-  <!-- monety -->
-  <g transform="translate(540,250)">
-    <ellipse cx="0" cy="60" rx="60" ry="16" fill="#e6b800"/>
-    <ellipse cx="0" cy="46" rx="60" ry="16" fill="#F7C400"/>
-    <ellipse cx="0" cy="30" rx="60" ry="16" fill="#e6b800"/>
-    <ellipse cx="0" cy="16" rx="60" ry="16" fill="#F7C400"/>
-    <text x="0" y="22" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#10314F" text-anchor="middle">zł</text>
-  </g>
-  <g transform="translate(690,300)">
-    <polygon points="28,0 16,22 40,22" fill="#0F75BC"/>
-    <polygon points="14,26 2,48 26,48" fill="#F7C400"/>
-    <polygon points="42,26 30,48 54,48" fill="#E6007E"/>
-    <polygon points="16,25 40,25 28,47" fill="#43B649"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Dofinansowanie">
+  <rect width="200" height="200" fill="#43B649"/>
+  <circle cx="100" cy="100" r="52" fill="#ffffff"/>
+  <circle cx="100" cy="100" r="52" fill="none" stroke="#2f8a35" stroke-width="4"/>
+  <text x="100" y="120" font-family="Arial,Helvetica,sans-serif" font-size="58" font-weight="700" fill="#2f8a35" text-anchor="middle">zł</text>
 </svg>

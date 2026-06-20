@@ -1,25 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Kopciuch i uchwała antysmogowa">
-  <rect width="800" height="400" fill="#EAF3FB"/>
-  <circle cx="120" cy="100" r="46" fill="#F7C400" opacity="0.9"/>
-  <rect y="320" width="800" height="80" fill="#dbe8f5"/>
-  <!-- dom -->
-  <rect x="300" y="210" width="200" height="120" fill="#ffffff" stroke="#10314F" stroke-width="4"/>
-  <polygon points="290,210 400,128 510,210" fill="#0F75BC"/>
-  <rect x="455" y="150" width="26" height="46" rx="3" fill="#10314F"/>
-  <rect x="345" y="250" width="44" height="80" fill="#BFE6FA" stroke="#10314F" stroke-width="3"/>
-  <rect x="420" y="250" width="55" height="55" fill="#BFE6FA" stroke="#10314F" stroke-width="3"/>
-  <!-- dym -->
-  <g fill="#9aa7b0">
-    <circle cx="470" cy="138" r="16"/><circle cx="492" cy="120" r="20"/><circle cx="520" cy="106" r="17"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Kotły i uchwała">
+  <rect width="200" height="200" fill="#0F75BC"/>
+  <g fill="#ffffff">
+    <circle cx="131" cy="44" r="6" opacity="0.55"/>
+    <circle cx="140" cy="33" r="7" opacity="0.75"/>
+    <circle cx="150" cy="23" r="6" opacity="0.9"/>
+    <rect x="122" y="50" width="14" height="42"/>
+    <polygon points="46,108 100,60 154,108"/>
+    <rect x="62" y="104" width="76" height="60"/>
   </g>
-  <!-- zakaz -->
-  <circle cx="500" cy="120" r="58" fill="none" stroke="#E6007E" stroke-width="11" opacity="0.92"/>
-  <line x1="460" y1="80" x2="540" y2="160" stroke="#E6007E" stroke-width="11" stroke-linecap="round" opacity="0.92"/>
-  <!-- akcent: trójkąt miasta -->
-  <g transform="translate(690,300)">
-    <polygon points="28,0 16,22 40,22" fill="#0F75BC"/>
-    <polygon points="14,26 2,48 26,48" fill="#F7C400"/>
-    <polygon points="42,26 30,48 54,48" fill="#E6007E"/>
-    <polygon points="16,25 40,25 28,47" fill="#43B649"/>
-  </g>
+  <rect x="74" y="120" width="22" height="44" fill="#0F75BC"/>
+  <rect x="108" y="120" width="24" height="24" fill="#0F75BC"/>
 </svg>

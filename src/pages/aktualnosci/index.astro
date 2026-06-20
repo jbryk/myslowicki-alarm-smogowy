@@ -14,7 +14,7 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
       <div class="grid grid--2" style="margin-top:1.5rem">
         {posts.map((p) => (
           <a class="card news" href={`/aktualnosci/${p.slug}/`}>
-            {p.data.obraz && <img class="news-img" src={p.data.obraz} alt="" loading="lazy" width="800" height="400" />}
+            {p.data.obraz && <img class="news-img" src={p.data.obraz} alt="" loading="lazy" width="200" height="200" />}
             <div class="news-txt">
               <time>{fmt(p.data.data)}</time>
               <h3>{p.data.tytul}</h3>
@@ -29,12 +29,12 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
 </Base>
 
 <style>
-  .news { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
-  .news-img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; display: block; background: var(--bg-blue-soft); }
-  .news-txt { padding: 1.1rem 1.3rem 1.3rem; }
+  .news { padding: 1rem 1.1rem; display: flex; gap: 1rem; align-items: flex-start; }
+  .news-img { width: 88px; height: 88px; flex: none; border-radius: 12px; object-fit: cover; background: var(--bg-blue-soft); }
+  .news-txt { min-width: 0; }
   .news time { font-size: 0.82rem; color: var(--text-muted); }
-  .news h3 { margin: 0.3rem 0; }
-  .news p { color: var(--text-muted); }
+  .news h3 { margin: 0.15rem 0 0.3rem; }
+  .news p { color: var(--text-muted); margin: 0 0 0.4rem; }
   .news .more { color: var(--blue); font-weight: 600; font-size: 0.9rem; }
   .news:hover { text-decoration: none; border-color: var(--blue); }
 </style>
