@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import AirQuality from '../components/AirQuality.astro';
+import MapaPowietrza from '../components/MapaPowietrza.astro';
 import { kamienie } from '../data/timeline';
 import { getCollection } from 'astro:content';
 
@@ -22,7 +22,7 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
     </div>
   </section>
 
-  <div class="container"><AirQuality /></div>
+  <div class="container" style="margin-top:-1.5rem"><MapaPowietrza /></div>
 
   <section class="section">
     <div class="container">
