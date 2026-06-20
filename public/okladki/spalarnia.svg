@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Spalarnia odpadów">
+  <rect width="800" height="400" fill="#EAF3FB"/>
+  <rect y="320" width="800" height="80" fill="#dbe8f5"/>
+  <!-- zakład -->
+  <g fill="#10314F">
+    <rect x="280" y="220" width="240" height="110"/>
+    <rect x="360" y="150" width="38" height="180"/>
+    <rect x="420" y="120" width="38" height="210"/>
+  </g>
+  <rect x="300" y="250" width="36" height="36" fill="#BFE6FA"/>
+  <rect x="350" y="250" width="36" height="36" fill="#BFE6FA"/>
+  <rect x="470" y="250" width="36" height="36" fill="#BFE6FA"/>
+  <!-- dym -->
+  <g fill="#9aa7b0">
+    <circle cx="379" cy="138" r="18"/><circle cx="402" cy="118" r="22"/><circle cx="430" cy="102" r="19"/>
+    <circle cx="439" cy="108" r="18"/><circle cx="462" cy="88" r="22"/>
+  </g>
+  <g transform="translate(700,300)">
+    <polygon points="28,0 16,22 40,22" fill="#0F75BC"/>
+    <polygon points="14,26 2,48 26,48" fill="#F7C400"/>
+    <polygon points="42,26 30,48 54,48" fill="#E6007E"/>
+    <polygon points="16,25 40,25 28,47" fill="#43B649"/>
+  </g>
+</svg>

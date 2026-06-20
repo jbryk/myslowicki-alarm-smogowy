@@ -14,10 +14,13 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
       <div class="grid grid--2" style="margin-top:1.5rem">
         {posts.map((p) => (
           <a class="card news" href={`/aktualnosci/${p.slug}/`}>
-            <time>{fmt(p.data.data)}</time>
-            <h3>{p.data.tytul}</h3>
-            {p.data.opis && <p>{p.data.opis}</p>}
-            <span class="more">Czytaj dalej →</span>
+            {p.data.obraz && <img class="news-img" src={p.data.obraz} alt="" loading="lazy" width="800" height="400" />}
+            <div class="news-txt">
+              <time>{fmt(p.data.data)}</time>
+              <h3>{p.data.tytul}</h3>
+              {p.data.opis && <p>{p.data.opis}</p>}
+              <span class="more">Czytaj dalej →</span>
+            </div>
           </a>
         ))}
       </div>
@@ -26,6 +29,9 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
 </Base>
 
 <style>
+  .news { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
+  .news-img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; display: block; background: var(--bg-blue-soft); }
+  .news-txt { padding: 1.1rem 1.3rem 1.3rem; }
   .news time { font-size: 0.82rem; color: var(--text-muted); }
   .news h3 { margin: 0.3rem 0; }
   .news p { color: var(--text-muted); }

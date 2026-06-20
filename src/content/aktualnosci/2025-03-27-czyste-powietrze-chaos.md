@@ -1,6 +1,7 @@
 ---
 tytul: "Czyste Powietrze — chaos zamiast realnej pomocy?"
 data: 2025-03-27
+obraz: "/okladki/doplaty.svg"
 opis: "Nowa odsłona programu rusza 31 marca 2025, ale zmiany w kryteriach mogą wykluczyć setki tysięcy najuboższych gospodarstw."
 ---
 

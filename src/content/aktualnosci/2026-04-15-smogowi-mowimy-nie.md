@@ -1,6 +1,7 @@
 ---
 tytul: "Konferencja „Smogowi mówimy NIE!” — relacja"
 data: 2026-04-15
+obraz: "/okladki/wydarzenia.svg"
 opis: "Młodzież, naukowcy i samorząd wspólnie przeciwko zanieczyszczeniom. Relacja z konferencji w I LO im. T. Kościuszki w Mysłowicach."
 ---
 

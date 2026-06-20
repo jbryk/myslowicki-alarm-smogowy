@@ -1,6 +1,7 @@
 ---
 tytul: "Pyłomierze gasną, gdy są najbardziej potrzebne"
 data: 2026-02-07
+obraz: "/okladki/pomiary.svg"
 opis: "W styczniu 2026 smog dał się we znaki mieszkańcom Mysłowic — a sieć lokalnych pyłomierzy Airly skurczyła się do dwóch czynnych czujników."
 ---
 

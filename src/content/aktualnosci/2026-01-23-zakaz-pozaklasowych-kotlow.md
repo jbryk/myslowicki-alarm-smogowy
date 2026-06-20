@@ -1,6 +1,7 @@
 ---
 tytul: "Od 1 stycznia 2026 obowiązuje zakaz pozaklasowych kotłów"
 data: 2026-01-23
+obraz: "/okladki/kotly.svg"
 opis: "Najtrudniejszy etap uchwały antysmogowej wszedł w życie. Co jest zakazane, jakie grożą kary i gdzie szukać dofinansowania."
 ---
 

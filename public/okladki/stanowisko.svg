@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Smog nad miastem">
+  <rect width="800" height="400" fill="#dfe7ee"/>
+  <rect width="800" height="210" fill="#EAF3FB"/>
+  <circle cx="660" cy="110" r="50" fill="#F7C400" opacity="0.85"/>
+  <!-- smog -->
+  <rect y="200" width="800" height="70" fill="#c4ccd3" opacity="0.7"/>
+  <!-- panorama -->
+  <g fill="#10314F">
+    <rect x="80" y="180" width="60" height="130"/>
+    <rect x="150" y="140" width="70" height="170"/>
+    <rect x="230" y="200" width="55" height="110"/>
+    <rect x="300" y="160" width="80" height="150"/>
+    <rect x="400" y="120" width="60" height="190"/>
+    <rect x="470" y="190" width="70" height="120"/>
+    <rect x="555" y="150" width="65" height="160"/>
+  </g>
+  <!-- kominy z dymem -->
+  <g fill="#9aa7b0">
+    <circle cx="180" cy="120" r="14"/><circle cx="196" cy="104" r="11"/>
+    <circle cx="425" cy="100" r="14"/><circle cx="441" cy="84" r="11"/>
+  </g>
+  <rect y="305" width="800" height="95" fill="#cdd7e0"/>
+  <g transform="translate(700,318)">
+    <polygon points="28,0 16,22 40,22" fill="#0F75BC"/>
+    <polygon points="14,26 2,48 26,48" fill="#F7C400"/>
+    <polygon points="42,26 30,48 54,48" fill="#E6007E"/>
+    <polygon points="16,25 40,25 28,47" fill="#43B649"/>
+  </g>
+</svg>

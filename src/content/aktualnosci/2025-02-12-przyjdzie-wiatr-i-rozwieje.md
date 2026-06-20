@@ -1,6 +1,7 @@
 ---
 tytul: "„Przyjdzie wiatr i rozwieje?” — o bagatelizowaniu smogu i micie donoszenia"
 data: 2025-02-12
+obraz: "/okladki/stanowisko.svg"
 opis: "Gdy władze i część mediów bagatelizują smog, a reagowanie na łamanie prawa nazywają donoszeniem — mieszkańcy mówią dość. Przegląd dyskusji."
 ---
 

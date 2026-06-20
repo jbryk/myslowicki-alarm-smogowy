@@ -1,6 +1,7 @@
 ---
 tytul: "Świętujemy 10-lecie Polskiego Alarmu Smogowego"
 data: 2025-05-24
+obraz: "/okladki/wydarzenia.svg"
 opis: "Dekada wspólnej walki o czyste powietrze. Mysłowicki Alarm Smogowy od początku jest częścią ogólnopolskiej sieci."
 autor: "Aleksandra Nowicka, Mysłowicki Alarm Smogowy"
 ---

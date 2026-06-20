@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="Dron i pomiar jakości powietrza">
+  <rect width="800" height="400" fill="#E9F6EE"/>
+  <rect y="300" width="800" height="100" fill="#d6ecdf"/>
+  <!-- panorama dachów -->
+  <g fill="#bcd6e8">
+    <polygon points="60,300 130,250 200,300"/>
+    <polygon points="180,300 250,240 320,300"/>
+    <polygon points="600,300 670,250 740,300"/>
+  </g>
+  <!-- dron -->
+  <g transform="translate(400,150)">
+    <rect x="-46" y="-10" width="92" height="20" rx="8" fill="#10314F"/>
+    <rect x="-70" y="-16" width="30" height="8" rx="4" fill="#0F75BC"/>
+    <rect x="40" y="-16" width="30" height="8" rx="4" fill="#0F75BC"/>
+    <circle cx="-66" cy="-12" r="16" fill="#0F75BC" opacity="0.35"/>
+    <circle cx="66" cy="-12" r="16" fill="#0F75BC" opacity="0.35"/>
+    <rect x="-14" y="10" width="28" height="16" rx="4" fill="#43B649"/>
+    <line x1="-30" y1="26" x2="-46" y2="70" stroke="#9aa7b0" stroke-width="3" stroke-dasharray="4 5"/>
+    <line x1="30" y1="26" x2="46" y2="70" stroke="#9aa7b0" stroke-width="3" stroke-dasharray="4 5"/>
+  </g>
+  <!-- pinezka czujnika -->
+  <g transform="translate(250,210)">
+    <path d="M0 0 C -22 0 -36 16 -36 36 C -36 62 0 96 0 96 C 0 96 36 62 36 36 C 36 16 22 0 0 0 Z" fill="#0F75BC"/>
+    <circle cx="0" cy="34" r="15" fill="#fff"/>
+  </g>
+  <g transform="translate(690,300)">
+    <polygon points="28,0 16,22 40,22" fill="#0F75BC"/>
+    <polygon points="14,26 2,48 26,48" fill="#F7C400"/>
+    <polygon points="42,26 30,48 54,48" fill="#E6007E"/>
+    <polygon points="16,25 40,25 28,47" fill="#43B649"/>
+  </g>
+</svg>

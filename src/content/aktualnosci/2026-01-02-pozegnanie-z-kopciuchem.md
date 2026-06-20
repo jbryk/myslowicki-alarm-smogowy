@@ -1,6 +1,7 @@
 ---
 tytul: "Pożegnanie z kopciuchem"
 data: 2026-01-02
+obraz: "/okladki/kotly.svg"
 opis: "Od 1 stycznia 2026 r. użytkowanie kopciuchów na terenie całego woj. śląskiego jest niezgodne z prawem — bez wyjątków i bez taryfy ulgowej."
 autor: "Jerzy Bryk, Mysłowicki Alarm Smogowy"
 ---

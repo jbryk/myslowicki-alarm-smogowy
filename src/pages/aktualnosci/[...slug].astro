@@ -17,6 +17,7 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
       <a class="back" href="/aktualnosci/">← Aktualności</a>
       <span class="eyebrow">{fmt(post.data.data)}</span>
       <h1>{post.data.tytul}</h1>
+      {post.data.obraz && <img class="cover" src={post.data.obraz} alt="" width="800" height="400" />}
       <Content />
     </div>
   </article>
@@ -24,5 +25,6 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
 
 <style>
   .back { display: inline-block; margin-bottom: 1rem; color: var(--text-muted); font-size: 0.9rem; }
+  .cover { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; border-radius: var(--radius); margin: 0.6rem 0 1.6rem; background: var(--bg-blue-soft); }
   .prose :global(blockquote) { border-left: 3px solid var(--border); margin: 1.2rem 0; padding: 0.4rem 1rem; color: var(--text-muted); font-style: italic; }
 </style>

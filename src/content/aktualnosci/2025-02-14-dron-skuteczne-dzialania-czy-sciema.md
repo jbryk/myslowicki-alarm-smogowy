@@ -1,6 +1,7 @@
 ---
 tytul: "Antysmogowy dron — skuteczne działania czy ściema?"
 data: 2025-02-14
+obraz: "/okladki/pomiary.svg"
 opis: "Miasto promuje kontrole dronem. Pytamy, po co dron, skoro gmina od lat zna adresy wszystkich kopciuchów — i czy lata także nad swoimi nieruchomościami."
 ---
 

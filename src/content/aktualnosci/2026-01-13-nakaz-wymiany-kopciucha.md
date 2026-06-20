@@ -1,6 +1,7 @@
 ---
 tytul: "Gmina może nakazać wymianę kopciucha. Czas dobrowolności się skończył"
 data: 2026-01-13
+obraz: "/okladki/kotly.svg"
 opis: "Po latach kampanii i dotacji nadszedł moment egzekwowania prawa. Samorządy mają skuteczne narzędzie — art. 363 Prawa ochrony środowiska."
 ---
 

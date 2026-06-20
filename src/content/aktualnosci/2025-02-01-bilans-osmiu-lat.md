@@ -1,6 +1,7 @@
 ---
 tytul: "Dlaczego w Mysłowicach ciągle śmierdzi dymem? Bilans ośmiu lat"
 data: 2025-02-01
+obraz: "/okladki/stanowisko.svg"
 opis: "Podsumowanie ośmiu lat walki o czyste powietrze: co się udało, gdzie utknęliśmy i dlaczego kluczem jest egzekwowanie przepisów."
 autor: "Jerzy Bryk, Mysłowicki Alarm Smogowy"
 ---

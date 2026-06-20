@@ -63,9 +63,12 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
       <div class="grid grid--3">
         {posts.map((p) => (
           <a class="card news" href={`/aktualnosci/${p.slug}/`}>
-            <time>{fmt(p.data.data)}</time>
-            <h3>{p.data.tytul}</h3>
-            {p.data.opis && <p>{p.data.opis}</p>}
+            {p.data.obraz && <img class="news-img" src={p.data.obraz} alt="" loading="lazy" width="800" height="400" />}
+            <div class="news-txt">
+              <time>{fmt(p.data.data)}</time>
+              <h3>{p.data.tytul}</h3>
+              {p.data.opis && <p>{p.data.opis}</p>}
+            </div>
           </a>
         ))}
       </div>
@@ -86,6 +89,9 @@ const fmt = (d: Date) => d.toLocaleDateString('pl-PL', { day: 'numeric', month: 
   .tl-body h3 { margin: 0 0 0.25rem; }
   .tl-body p { margin: 0; color: var(--text-muted); }
 
+  .news { padding: 0; overflow: hidden; }
+  .news-img { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; display: block; background: var(--bg-blue-soft); }
+  .news-txt { padding: 1.1rem 1.3rem 1.3rem; }
   .news time { font-size: 0.82rem; color: var(--text-muted); }
   .news h3 { margin: 0.3rem 0; }
   .news:hover { text-decoration: none; border-color: var(--blue); }

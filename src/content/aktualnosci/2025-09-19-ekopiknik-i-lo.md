@@ -1,6 +1,7 @@
 ---
 tytul: "Ekopiknik w I LO im. T. Kościuszki"
 data: 2025-09-19
+obraz: "/okladki/wydarzenia.svg"
 opis: "Spotkanie z mieszkańcami i młodzieżą na ekopikniku w I Liceum Ogólnokształcącym w Mysłowicach."
 ---
 

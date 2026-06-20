@@ -1,6 +1,7 @@
 ---
 tytul: "Spalarnia odpadów w Mysłowicach — same korzyści bez konkretów?"
 data: 2022-05-23
+obraz: "/okladki/spalarnia.svg"
 opis: "Na sesji Rady Miasta przedstawiono plany spalarni odpadów. Pytamy o analizy, koszty, konsultacje i zgodność z unijną polityką obiegu zamkniętego."
 ---
 

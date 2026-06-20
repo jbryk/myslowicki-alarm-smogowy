@@ -1,6 +1,7 @@
 ---
 tytul: "Miasto wysyła pisma do właścicieli pozaklasowych pieców"
 data: 2026-02-10
+obraz: "/okladki/kotly.svg"
 opis: "Mysłowice rozpoczęły wysyłkę pism informacyjnych w sprawie wymiany kopciuchów. To ostatni i najtrudniejszy etap wdrażania uchwały antysmogowej."
 ---
 

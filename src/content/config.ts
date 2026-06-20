@@ -6,6 +6,7 @@ const aktualnosci = defineCollection({
     tytul: z.string(),
     data: z.coerce.date(),
     opis: z.string().optional(),
+    obraz: z.string().optional(),
     autor: z.string().default('Mysłowicki Alarm Smogowy'),
   }),
 });
