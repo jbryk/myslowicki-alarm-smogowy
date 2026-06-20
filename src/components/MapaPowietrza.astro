@@ -34,11 +34,20 @@
   :global(.mapa-btn-mys:hover) { background: var(--bg-blue-soft); color: var(--blue); }
   :global(.mapa-hint) { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(16,49,79,0.45); color: #fff; font-weight: 600; font-size: 1rem; text-align: center; padding: 1rem; opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 500; }
   :global(.mapa-hint.show) { opacity: 1; }
-  :global(.leaflet-popup-content) { font-family: var(--font); margin: 0.7rem 0.9rem; }
-  :global(.aq-pop h4) { margin: 0 0 0.2rem; font-size: 0.98rem; color: var(--navy); }
-  :global(.aq-pop .src) { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue); font-weight: 600; }
-  :global(.aq-pop .idx) { font-weight: 600; margin: 0.3rem 0 0.1rem; }
-  :global(.aq-pop .pm) { font-size: 0.85rem; color: var(--text-muted); }
+  :global(.aq-popup .leaflet-popup-content-wrapper) { padding: 0; overflow: hidden; border-radius: 14px; box-shadow: 0 8px 28px rgba(16,49,79,0.25); }
+  :global(.aq-popup .leaflet-popup-content) { margin: 0; width: 240px !important; font-family: var(--font); }
+  :global(.aqp-hd) { padding: 0.8rem 0.9rem 0.7rem; }
+  :global(.aqp-src) { font-size: 0.66rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.85; }
+  :global(.aqp-name) { font-size: 0.97rem; font-weight: 600; line-height: 1.25; margin-top: 0.1rem; }
+  :global(.aqp-idx) { font-size: 0.9rem; font-weight: 500; margin-top: 0.3rem; }
+  :global(.aqp-bd) { padding: 0.5rem 0.9rem 0.8rem; background: #fff; }
+  :global(.aqp-row) { display: flex; justify-content: space-between; align-items: baseline; padding: 0.32rem 0; border-bottom: 1px solid var(--border); }
+  :global(.aqp-row:last-of-type) { border-bottom: 0; }
+  :global(.aqp-row span) { color: var(--text-muted); font-size: 0.85rem; }
+  :global(.aqp-row b) { color: var(--navy); font-size: 1.05rem; }
+  :global(.aqp-row small) { color: var(--text-muted); font-weight: 400; font-size: 0.68rem; }
+  :global(.aqp-note) { color: var(--text-muted); font-size: 0.82rem; padding: 0.2rem 0; }
+  :global(.aqp-more) { display: inline-block; margin-top: 0.55rem; font-size: 0.85rem; font-weight: 600; color: var(--blue); }
 </style>
 
 <script is:inline>
@@ -89,6 +98,13 @@
         }
       }, { passive: false });
 
+      function kontrast(hex) {
+        var h = (hex || '').replace('#', '');
+        if (h.length !== 6) return '#10314F';
+        var r = parseInt(h.substr(0, 2), 16), g = parseInt(h.substr(2, 2), 16), b = parseInt(h.substr(4, 2), 16);
+        return (0.299 * r + 0.587 * g + 0.114 * b) > 150 ? '#10314F' : '#ffffff';
+      }
+
       fetch('/api/powietrze')
         .then(function (r) { return r.json(); })
         .then(function (data) {
@@ -101,18 +117,25 @@
             liczba[p.zrodlo] = (liczba[p.zrodlo] || 0) + 1;
             var m = L.circleMarker([p.lat, p.lng], {
               radius: 10, fillColor: p.kolor || '#9aa7b0',
-              color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.9,
+              color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.95,
             }).addTo(map);
-            var pm = '';
-            if (p.pm10 != null) pm += 'PM10: <b>' + p.pm10 + '</b> ';
-            if (p.pm25 != null) pm += 'PM2.5: <b>' + p.pm25 + '</b>';
-            var html = '<div class="aq-pop"><span class="src">' + p.zrodlo + '</span>' +
-              '<h4>' + p.nazwa + '</h4>' +
-              (p.indeks ? '<div class="idx">' + p.indeks + '</div>' : '') +
-              (pm ? '<div class="pm">' + pm + '</div>' : '') +
-              (p.url ? '<div class="pm"><a href="' + p.url + '" target="_blank" rel="noopener">więcej →</a></div>' : '') +
+            var rows = '';
+            if (p.pm10 != null) rows += '<div class="aqp-row"><span>PM10</span><b>' + p.pm10 + ' <small>µg/m³</small></b></div>';
+            if (p.pm25 != null) rows += '<div class="aqp-row"><span>PM2.5</span><b>' + p.pm25 + ' <small>µg/m³</small></b></div>';
+            if (!rows) rows = '<div class="aqp-note">Indeks ogólny stacji</div>';
+            var hd = p.kolor || '#9aa7b0';
+            var html =
+              '<div class="aqp">' +
+                '<div class="aqp-hd" style="background:' + hd + ';color:' + kontrast(hd) + '">' +
+                  '<div class="aqp-src">' + p.zrodlo + '</div>' +
+                  '<div class="aqp-name">' + p.nazwa + '</div>' +
+                  (p.indeks ? '<div class="aqp-idx">' + p.indeks + '</div>' : '') +
+                '</div>' +
+                '<div class="aqp-bd">' + rows +
+                  (p.url ? '<a class="aqp-more" href="' + p.url + '" target="_blank" rel="noopener">Więcej →</a>' : '') +
+                '</div>' +
               '</div>';
-            m.bindPopup(html);
+            m.bindPopup(html, { className: 'aq-popup', maxWidth: 260, minWidth: 220 });
             grupa.push(m);
           });
           if (grupa.length) {
