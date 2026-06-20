@@ -19,7 +19,7 @@ import Base from '../layouts/Base.astro';
 
         <aside class="card kontakt-info">
           <h3>Bezpośrednio</h3>
-          <p><a href="mailto:myslowicki.smog@gmail.com">myslowicki.smog@gmail.com</a></p>
+          <p><a href="mailto:kontakt@myslowicki-alarm-smogowy.pl">kontakt@myslowicki-alarm-smogowy.pl</a></p>
           <p><a href="https://www.facebook.com/myslowicki.alarm.smogowy" target="_blank" rel="noopener">Facebook — Mysłowicki Alarm Smogowy</a></p>
           <h3>Zgłoś smog</h3>
           <p>Spalanie odpadów lub kopcący komin zgłoś Straży Miejskiej w Mysłowicach — tel. <strong>986</strong>. Jak to zrobić: <a href="/dla-mieszkanca/">poradnik dla mieszkańca</a>.</p>
@@ -53,6 +53,6 @@ import Base from '../layouts/Base.astro';
     const tresc = String(fd.get('tresc') || '');
     const subject = encodeURIComponent(`Wiadomość ze strony — ${imie}`);
     const body = encodeURIComponent(`${tresc}\n\n— ${imie} (${email})`);
-    window.location.href = `mailto:myslowicki.smog@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:kontakt@myslowicki-alarm-smogowy.pl?subject=${subject}&body=${body}`;
   });
 </script>
