@@ -49,7 +49,7 @@
       // znacznik centrum Mysłowic
       L.marker([50.2074, 19.1374]).addTo(map).bindPopup('<div class="aq-pop"><h4>Mysłowice</h4></div>');
 
-      fetch('/api/powietrze.json')
+      fetch('/api/powietrze')
         .then(function (r) { return r.json(); })
         .then(function (data) {
           var pkt = (data && data.punkty) || [];
