@@ -30,6 +30,10 @@
   .mapa-legenda { display: flex; flex-wrap: wrap; gap: 0.4rem 1rem; margin-top: 0.9rem; font-size: 0.82rem; color: var(--text-muted); }
   .mapa-legenda i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 0.35rem; vertical-align: -1px; }
   .mapa-info { font-size: 0.82rem; color: var(--text-muted); margin: 0.6rem 0 0; }
+  :global(.mapa-btn-mys) { background: #fff; border: 0; cursor: pointer; font: 600 0.82rem var(--font); color: var(--navy); padding: 0.4rem 0.7rem; border-radius: var(--radius-sm); box-shadow: 0 1px 4px rgba(16,49,79,0.3); }
+  :global(.mapa-btn-mys:hover) { background: var(--bg-blue-soft); color: var(--blue); }
+  :global(.mapa-hint) { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(16,49,79,0.45); color: #fff; font-weight: 600; font-size: 1rem; text-align: center; padding: 1rem; opacity: 0; pointer-events: none; transition: opacity 0.2s; z-index: 500; }
+  :global(.mapa-hint.show) { opacity: 1; }
   :global(.leaflet-popup-content) { font-family: var(--font); margin: 0.7rem 0.9rem; }
   :global(.aq-pop h4) { margin: 0 0 0.2rem; font-size: 0.98rem; color: var(--navy); }
   :global(.aq-pop .src) { font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--blue); font-weight: 600; }
@@ -48,6 +52,42 @@
 
       // znacznik centrum Mysłowic
       L.marker([50.2074, 19.1374]).addTo(map).bindPopup('<div class="aq-pop"><h4>Mysłowice</h4></div>');
+
+      // przycisk: przybliż do Mysłowic
+      var BtnMys = L.Control.extend({
+        options: { position: 'topleft' },
+        onAdd: function () {
+          var b = L.DomUtil.create('button', 'leaflet-bar mapa-btn-mys');
+          b.type = 'button';
+          b.title = 'Przybliż do Mysłowic';
+          b.textContent = 'Mysłowice';
+          L.DomEvent.disableClickPropagation(b);
+          L.DomEvent.on(b, 'click', function (e) {
+            L.DomEvent.stop(e);
+            map.setView([50.2074, 19.1374], 13);
+          });
+          return b;
+        },
+      });
+      map.addControl(new BtnMys());
+
+      // zoom scrollem tylko z Ctrl + podpowiedź
+      var mapEl = document.getElementById('mapa-powietrza');
+      var hint = L.DomUtil.create('div', 'mapa-hint', mapEl);
+      hint.textContent = 'Przytrzymaj Ctrl i przewiń, aby przybliżyć';
+      var hintT;
+      mapEl.addEventListener('wheel', function (e) {
+        if (e.ctrlKey) {
+          e.preventDefault();
+          var d = e.deltaY < 0 ? 1 : -1;
+          map.setZoomAround(map.mouseEventToContainerPoint(e), map.getZoom() + d);
+          hint.classList.remove('show');
+        } else {
+          hint.classList.add('show');
+          clearTimeout(hintT);
+          hintT = setTimeout(function () { hint.classList.remove('show'); }, 1300);
+        }
+      }, { passive: false });
 
       fetch('/api/powietrze')
         .then(function (r) { return r.json(); })
