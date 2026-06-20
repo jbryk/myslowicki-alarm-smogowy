@@ -24,6 +24,15 @@ const liczba = (v) => {
   return Number.isFinite(n) ? n : null;
 };
 
+// Indeks jakości powietrza z poziomów pyłów (progi GIOŚ)
+function indeksZPylow(pm10, pm25) {
+  const l10 = pm10 == null ? -1 : pm10 <= 20 ? 0 : pm10 <= 50 ? 1 : pm10 <= 80 ? 2 : pm10 <= 110 ? 3 : pm10 <= 150 ? 4 : 5;
+  const l25 = pm25 == null ? -1 : pm25 <= 13 ? 0 : pm25 <= 35 ? 1 : pm25 <= 55 ? 2 : pm25 <= 75 ? 3 : pm25 <= 110 ? 4 : 5;
+  const lvl = Math.max(l10, l25);
+  const nazwy = ['bardzo dobry', 'dobry', 'umiarkowany', 'dostateczny', 'zły', 'bardzo zły'];
+  return lvl < 0 ? { kolor: '#9aa7b0', nazwa: null } : { kolor: GIOS_KOLOR[lvl], nazwa: nazwy[lvl] };
+}
+
 async function pobierzGios() {
   return Promise.all(
     GIOS_STACJE.map(async (s) => {
@@ -112,9 +121,53 @@ async function pobierzLooko2() {
   } catch { return []; }
 }
 
+// Syngeos — publiczny (nieoficjalny) endpoint, bez klucza
+async function pobierzSyngeos() {
+  try {
+    const list = await fetch('https://api.syngeos.pl/api/public/devices');
+    if (!list.ok) return [];
+    const arr = await list.json();
+    if (!Array.isArray(arr)) return [];
+    const inBox = arr
+      .filter((o) => {
+        const c = o.coordinates;
+        return Array.isArray(c) && c.length === 2 &&
+          c[0] >= BBOX.latMin && c[0] <= BBOX.latMax && c[1] >= BBOX.lngMin && c[1] <= BBOX.lngMax;
+      })
+      .slice(0, 12);
+    const punkty = await Promise.all(
+      inBox.map(async (dev) => {
+        try {
+          const r = await fetch(`https://api.syngeos.pl/api/public/data/device/${dev.id}`);
+          const d = await r.json();
+          if (!d || !Array.isArray(d.sensors)) return null;
+          const val = (name) => {
+            const s = d.sensors.find((x) => x.name === name);
+            const v = s && s.data && s.data[0] ? s.data[0].value : null;
+            return typeof v === 'number' ? Math.round(v) : null;
+          };
+          const pm10 = val('pm10');
+          const pm25 = val('pm2_5');
+          const idx = indeksZPylow(pm10, pm25);
+          return {
+            zrodlo: 'Syngeos',
+            nazwa: [d.address, d.city].filter(Boolean).join(', ') || 'Czujnik Syngeos',
+            lat: d.coordinates[0], lng: d.coordinates[1],
+            indeks: idx.nazwa, kolor: idx.kolor, pm10, pm25,
+            url: 'https://panel.syngeos.pl/',
+          };
+        } catch { return null; }
+      })
+    );
+    return punkty.filter(Boolean);
+  } catch { return []; }
+}
+
 export default async function handler(req, res) {
-  const [gios, airly, looko2] = await Promise.all([pobierzGios(), pobierzAirly(), pobierzLooko2()]);
-  const punkty = [...gios, ...airly, ...looko2];
+  const [gios, airly, looko2, syngeos] = await Promise.all([
+    pobierzGios(), pobierzAirly(), pobierzLooko2(), pobierzSyngeos(),
+  ]);
+  const punkty = [...gios, ...airly, ...looko2, ...syngeos];
   res.setHeader('Content-Type', 'application/json; charset=utf-8');
   res.setHeader('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=600');
   res.status(200).send(JSON.stringify({ punkty }));
