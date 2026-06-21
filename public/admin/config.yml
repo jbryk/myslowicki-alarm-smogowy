@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: jbryk/myslowicki-alarm-smogowy
+  branch: main
+  base_url: https://myslowicki-alarm-smogowy.vercel.app
+  auth_endpoint: /api/auth
+
+site_url: https://myslowicki-alarm-smogowy.pl
+display_url: https://myslowicki-alarm-smogowy.pl
+locale: pl
+
+media_folder: "public/okladki"
+public_folder: "/okladki"
+
+collections:
+  - name: "aktualnosci"
+    label: "Aktualności"
+    label_singular: "Aktualność"
+    folder: "src/content/aktualnosci"
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    sortable_fields: ["data", "tytul"]
+    fields:
+      - { name: "tytul", label: "Tytuł", widget: "string" }
+      - { name: "data", label: "Data", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { name: "opis", label: "Opis (krótka zajawka na kafelku)", widget: "string", required: false }
+      - { name: "obraz", label: "Miniatura (zdjęcie lub grafika)", widget: "image", required: false }
+      - { name: "autor", label: "Autor", widget: "string", required: false, default: "Mysłowicki Alarm Smogowy" }
+      - { name: "body", label: "Treść", widget: "markdown" }
