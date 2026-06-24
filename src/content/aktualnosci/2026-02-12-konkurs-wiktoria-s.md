@@ -1,13 +1,15 @@
 ---
 tytul: "Smog pod lupą: Smogowi mówimy NIE! (Wiktoria S.)"
 data: 2026-02-12
-obraz: "/okladki/konkurs.svg"
+obraz: "/prace/wiktoria-s-plakat.jpg"
 opis: "Praca konkursowa „Smog pod lupą!” — smog jako nieproszony gość i to, co każdy z nas może zrobić."
 autor: "Wiktoria S. — praca konkursowa"
 ---
 
 Praca zgłoszona w konkursie **„Smog pod lupą!”** Mysłowickiego Alarmu Smogowego.
 Publikujemy ją za zgodą organizatorów; autorka podpisana inicjałem.
+
+![Plakat „Smogowi mówimy NIE!” — praca konkursowa Wiktorii S.](/prace/wiktoria-s-plakat.jpg)
 
 ## Smogowi mówimy NIE!
 
