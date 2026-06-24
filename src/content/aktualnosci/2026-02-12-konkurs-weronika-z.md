@@ -1,6 +1,6 @@
 ---
 tytul: "Smog pod lupą: Mysłowicki survival (Weronika Z.)"
-data: 2026-04-14
+data: 2026-02-12
 obraz: "/okladki/konkurs.svg"
 opis: "Praca konkursowa „Smog pod lupą!” — poradnik przetrwania sezonu smogowego w Mysłowicach."
 autor: "Weronika Z. — praca konkursowa"
@@ -44,3 +44,7 @@ wymianę pieca i okien.
 
 Mysłowice powoli wychodzą z cienia dymu. Dzięki technologii i świadomości „czarny
 Śląsk” staje się tylko wspomnieniem w starych kronikach.
+
+---
+
+_Praca powstała w ramach konkursu „Smog pod lupą!”, zrealizowanego w projekcie „Nasze powietrze”, finansowanym przez Clean Air Fund._

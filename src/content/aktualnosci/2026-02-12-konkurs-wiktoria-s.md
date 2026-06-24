@@ -1,6 +1,6 @@
 ---
 tytul: "Smog pod lupą: Smogowi mówimy NIE! (Wiktoria S.)"
-data: 2026-04-14
+data: 2026-02-12
 obraz: "/okladki/konkurs.svg"
 opis: "Praca konkursowa „Smog pod lupą!” — smog jako nieproszony gość i to, co każdy z nas może zrobić."
 autor: "Wiktoria S. — praca konkursowa"
@@ -42,3 +42,7 @@ wspomnieniem i tematem starych żartów.
 o siebie nawzajem.
 
 _#SmogowiMówimyNIE #CzystePowietrze #EkoTrend #OddychajŚwiadomie_
+
+---
+
+_Praca powstała w ramach konkursu „Smog pod lupą!”, zrealizowanego w projekcie „Nasze powietrze”, finansowanym przez Clean Air Fund._

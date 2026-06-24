@@ -1,6 +1,6 @@
 ---
 tytul: "Smog pod lupą: Powietrze, którego nie widać (Dominika Z.)"
-data: 2026-04-14
+data: 2026-02-12
 obraz: "/okladki/konkurs.svg"
 opis: "Praca konkursowa z konkursu „Smog pod lupą!” — o niewidzialnym problemie, który dotyczy nas wszystkich."
 autor: "Dominika Z. — praca konkursowa"
@@ -40,3 +40,7 @@ Każde działanie ma znaczenie, bo czyste powietrze to wspólna sprawa wszystkic
 mieszkańców.
 
 _#CzystePowietrze #StopSmog #DbamyOŚrodowisko #Ekologia #Zdrowie_
+
+---
+
+_Praca powstała w ramach konkursu „Smog pod lupą!”, zrealizowanego w projekcie „Nasze powietrze”, finansowanym przez Clean Air Fund._

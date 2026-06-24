@@ -1,6 +1,6 @@
 ---
 tytul: "Smog pod lupą: Smog w Mysłowicach — problem lokalny (Mikołaj K.)"
-data: 2026-04-14
+data: 2026-02-12
 obraz: "/okladki/konkurs.svg"
 opis: "Praca konkursowa „Smog pod lupą!” — rzeczowa analiza skali, przyczyn i skutków smogu w Mysłowicach."
 autor: "Mikołaj K. — praca konkursowa"
@@ -42,3 +42,7 @@ sprzyjających kumulacji zanieczyszczeń. Wymaga kompleksowych działań — od
 indywidualnych (wymiana pieca, ocieplenie domu) po politykę lokalną i edukację
 społeczną. Zieleń miejska, lepszy transport publiczny i kontrola emisji to kolejne
 kroki ku czystszemu powietrzu.
+
+---
+
+_Praca powstała w ramach konkursu „Smog pod lupą!”, zrealizowanego w projekcie „Nasze powietrze”, finansowanym przez Clean Air Fund._

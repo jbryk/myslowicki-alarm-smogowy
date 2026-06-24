@@ -1,6 +1,6 @@
 ---
 tytul: "Smog pod lupą: Zmień swoje otoczenie — czas działać! (Zuzanna K.)"
-data: 2026-04-14
+data: 2026-02-12
 obraz: "/okladki/konkurs.svg"
 opis: "Praca konkursowa „Smog pod lupą!” — walka z mitami o smogu i konkretne powody, by działać już teraz."
 autor: "Zuzanna K. — praca konkursowa"
@@ -46,3 +46,7 @@ dzieci, seniorów i kobiety w ciąży.
 i podejrzewasz spalanie śmieci, nie wahaj się działać.
 
 _#SmogPodLupą #zanieczyszczeniePowietrza_
+
+---
+
+_Praca powstała w ramach konkursu „Smog pod lupą!”, zrealizowanego w projekcie „Nasze powietrze”, finansowanym przez Clean Air Fund._

@@ -1,6 +1,6 @@
 ---
 tytul: "Smog pod lupą: Zmieńmy razem świadomość o smogu (Anna P.)"
-data: 2026-04-14
+data: 2026-02-12
 obraz: "/prace/anna-p-myslowice-smog.png"
 opis: "Praca konkursowa „Smog pod lupą!” — reportaż o niewidzialnym problemie, który dusi Mysłowice."
 autor: "Anna P. — praca konkursowa"
@@ -42,3 +42,7 @@ Czy Mysłowice mają szansę na czystsze powietrze? Tak — ale tylko wtedy, gdy
 smogiem stanie się wspólnym celem miasta i jego mieszkańców. Bo czyste powietrze to
 nie luksus, lecz podstawowe prawo każdego człowieka. Edukujmy, reagujmy i nie bądźmy
 obojętni — każdy oddech ma znaczenie.
+
+---
+
+_Praca powstała w ramach konkursu „Smog pod lupą!”, zrealizowanego w projekcie „Nasze powietrze”, finansowanym przez Clean Air Fund._
