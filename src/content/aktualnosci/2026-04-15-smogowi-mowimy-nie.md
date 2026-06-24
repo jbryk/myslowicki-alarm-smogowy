@@ -1,7 +1,7 @@
 ---
 tytul: "Konferencja „Smogowi mówimy NIE!” — relacja"
 data: 2026-04-15
-obraz: "/okladki/wydarzenia.svg"
+obraz: "/prace/konferencja-sala.jpg"
 opis: "Młodzież, naukowcy i samorząd wspólnie przeciwko zanieczyszczeniom. Relacja z konferencji w I LO im. T. Kościuszki w Mysłowicach."
 ---
 
@@ -11,6 +11,10 @@ edukacyjnej realizowanej przez Mysłowicki Alarm Smogowy. Wydarzenie zgromadził
 naukowców, przedstawicieli samorządu, straży miejskiej, aktywistów oraz licznie
 przybyłą młodzież i mieszkańców Mysłowic, których połączył wspólny cel — rzetelna
 edukacja i walka o czyste powietrze.
+
+![Konferencja „Smogowi mówimy NIE!” — sala i panel prelegentów](/prace/konferencja-sala.jpg)
+
+![Panel ekspertów podczas konferencji](/prace/konferencja-panel.jpg)
 
 ## Uczniowie w akcji
 

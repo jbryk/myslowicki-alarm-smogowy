@@ -1,7 +1,7 @@
 ---
 tytul: "Smog pod lupą: praca filmowa (Senior_2)"
 data: 2026-02-12
-obraz: "/okladki/konkurs.svg"
+obraz: "/prace/konkurs-senior-2-thumb.jpg"
 opis: "Praca konkursowa „Smog pod lupą!” w formie filmu."
 autor: "Senior_2 — praca konkursowa"
 ---

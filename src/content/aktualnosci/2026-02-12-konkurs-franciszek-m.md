@@ -1,7 +1,7 @@
 ---
 tytul: "Smog pod lupą: praca filmowa (Franciszek M.)"
 data: 2026-02-12
-obraz: "/okladki/konkurs.svg"
+obraz: "/prace/konkurs-franciszek-m-thumb.jpg"
 opis: "Praca konkursowa „Smog pod lupą!” w formie filmu."
 autor: "Franciszek M. — praca konkursowa"
 ---

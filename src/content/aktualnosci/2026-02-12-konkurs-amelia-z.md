@@ -1,7 +1,7 @@
 ---
 tytul: "Smog pod lupą: praca filmowa (Amelia Z.)"
 data: 2026-02-12
-obraz: "/okladki/konkurs.svg"
+obraz: "/prace/konkurs-amelia-z-thumb.jpg"
 opis: "Praca konkursowa „Smog pod lupą!” w formie filmu."
 autor: "Amelia Z. — praca konkursowa"
 ---
