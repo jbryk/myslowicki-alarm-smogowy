@@ -1,7 +1,7 @@
 ---
 tytul: "Antysmogowy dron — skuteczne działania czy ściema?"
 data: 2025-02-14
-obraz: "/okladki/pomiary.svg"
+obraz: "/prace/news-dron-komin.jpg"
 opis: "Miasto promuje kontrole dronem. Pytamy, po co dron, skoro gmina od lat zna adresy wszystkich kopciuchów — i czy lata także nad swoimi nieruchomościami."
 ---
 
@@ -15,6 +15,9 @@ wymienili kotłów zgodnie z uchwałą antysmogową. Na pierwszy rzut oka brzmi
 nieruchomości — wszystkie powinny być zarejestrowane w Centralnej Ewidencji
 Emisyjności Budynków (CEEB). Po co więc dron za ponad 200 tysięcy złotych, skoro
 miasto i tak wie, gdzie stoją kopciuchy?
+
+![Dron antysmogowy przy dymiącym kominie](/prace/news-dron-komin.jpg)
+![Billboard MAS: „Nie pal śmieci, bo ci dron do chałpy wleci”](/prace/news-billboard.jpg)
 
 ## Miasto samo łamie uchwałę
 

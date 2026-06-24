@@ -1,7 +1,7 @@
 ---
 tytul: "Spalarnia odpadów w Mysłowicach — same korzyści bez konkretów?"
 data: 2022-05-23
-obraz: "/okladki/spalarnia.svg"
+obraz: "/prace/news-zrodla.jpg"
 opis: "Na sesji Rady Miasta przedstawiono plany spalarni odpadów. Pytamy o analizy, koszty, konsultacje i zgodność z unijną polityką obiegu zamkniętego."
 ---
 
@@ -12,6 +12,8 @@ konkretów. Warto wiedzieć, że prace nad spalarnią w Mysłowicach trwają od 
 
 Zdaniem prezesa spalarnia ma obniżyć koszty gospodarowania odpadami, być
 „praktycznie nieszkodliwa” i dodatkowo produkować wodór zasilający śmieciarki.
+
+![Źródła smogu — infografika](/prace/news-zrodla.jpg)
 
 ## Pytania bez odpowiedzi
 

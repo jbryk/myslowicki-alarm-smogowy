@@ -1,7 +1,7 @@
 ---
 tytul: "Dlaczego w Mysłowicach ciągle śmierdzi dymem? Bilans ośmiu lat"
 data: 2025-02-01
-obraz: "/okladki/stanowisko.svg"
+obraz: "/prace/news-wdychamy.jpg"
 opis: "Podsumowanie ośmiu lat walki o czyste powietrze: co się udało, gdzie utknęliśmy i dlaczego kluczem jest egzekwowanie przepisów."
 autor: "Jerzy Bryk, Mysłowicki Alarm Smogowy"
 ---
@@ -9,6 +9,8 @@ autor: "Jerzy Bryk, Mysłowicki Alarm Smogowy"
 Mysłowicki Alarm Smogowy rozpoczął działalność 10 stycznia 2017 r. — był wynikiem
 sprzeciwu grupy mieszkańców wobec godzenia się na życie w „komorze gazowej”. Po
 ośmiu latach czas na bilans.
+
+![Wdychamy 7× więcej powietrza niż jemy i pijemy](/prace/news-wdychamy.jpg)
 
 ## Co się udało
 

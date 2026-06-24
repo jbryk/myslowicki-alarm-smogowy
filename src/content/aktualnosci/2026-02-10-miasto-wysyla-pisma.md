@@ -1,7 +1,7 @@
 ---
 tytul: "Miasto wysyła pisma do właścicieli pozaklasowych pieców"
 data: 2026-02-10
-obraz: "/okladki/kotly.svg"
+obraz: "/prace/news-kopciuch.jpg"
 opis: "Mysłowice rozpoczęły wysyłkę pism informacyjnych w sprawie wymiany kopciuchów. To ostatni i najtrudniejszy etap wdrażania uchwały antysmogowej."
 ---
 
@@ -12,6 +12,8 @@ Ewidencji Emisyjności Budynków (CEEB) użytkowanie takich urządzeń.
 
 To dobry i potrzebny krok — władze miasta pokazują, że chcą skutecznie wdrażać
 uchwałę antysmogową.
+
+![Kopciuch — adresat pism z urzędu](/prace/news-kopciuch.jpg)
 
 ## Najtrudniejszy etap
 

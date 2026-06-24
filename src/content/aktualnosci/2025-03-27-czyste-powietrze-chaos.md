@@ -1,7 +1,7 @@
 ---
 tytul: "Czyste Powietrze — chaos zamiast realnej pomocy?"
 data: 2025-03-27
-obraz: "/okladki/doplaty.svg"
+obraz: "/prace/news-dotacja.jpg"
 opis: "Nowa odsłona programu rusza 31 marca 2025, ale zmiany w kryteriach mogą wykluczyć setki tysięcy najuboższych gospodarstw."
 ---
 
@@ -9,6 +9,8 @@ Od 28 listopada 2024 do 30 marca 2025 r. program **„Czyste Powietrze”** zost
 zawieszony. 31 marca rusza jego nowa odsłona — niestety zamiast realnych rozwiązań
 wprowadzane zmiany mogą pogłębić problemy i wykluczyć setki tysięcy gospodarstw
 domowych.
+
+![Weź miejską dotację i wyrzuć kopciucha](/prace/news-dotacja.jpg)
 
 ## Nowe zasady = wykluczenie najuboższych
 

@@ -1,7 +1,7 @@
 ---
 tytul: "„Przyjdzie wiatr i rozwieje?” — o bagatelizowaniu smogu i micie donoszenia"
 data: 2025-02-12
-obraz: "/okladki/stanowisko.svg"
+obraz: "/prace/news-zdrowie.jpg"
 opis: "Gdy władze i część mediów bagatelizują smog, a reagowanie na łamanie prawa nazywają donoszeniem — mieszkańcy mówią dość. Przegląd dyskusji."
 ---
 
@@ -16,6 +16,8 @@ o smogu w dzielnicy Morgi. Zamiast rzeczowej informacji padł komentarz redakcji
 egzekwować uchwałę antysmogową, usłyszeliśmy, że **reagowanie na łamanie prawa
 to „donoszenie na mieszkańców”**, a właściwą metodą jest wyłącznie edukacja
 i rozmowa.
+
+![Smog powoduje — skutki zdrowotne](/prace/news-zdrowie.jpg)
 
 ## Edukację mamy za sobą — teraz czas na egzekwowanie prawa
 

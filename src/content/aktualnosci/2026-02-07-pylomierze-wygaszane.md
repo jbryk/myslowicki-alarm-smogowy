@@ -11,6 +11,8 @@ wyjątkowo doskwierał odór spalanych odpadów. Mieszkańcy ze zdziwieniem patr
 mapę Airly — tam, gdzie jeszcze niedawno działało kilka czujników, dziś świeci
 pustką.
 
+![Smog nad mysłowicką ulicą](/prace/news-kopciuch.jpg)
+
 ## Co zostało z sieci pomiarowej
 
 Obecnie w Mysłowicach czynne są **dwa** pyłomierze: jeden na **Ćmoku** —

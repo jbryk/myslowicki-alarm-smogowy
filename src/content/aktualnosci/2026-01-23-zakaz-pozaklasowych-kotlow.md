@@ -1,13 +1,15 @@
 ---
 tytul: "Od 1 stycznia 2026 obowiązuje zakaz pozaklasowych kotłów"
 data: 2026-01-23
-obraz: "/okladki/kotly.svg"
+obraz: "/prace/news-kopciuch.jpg"
 opis: "Najtrudniejszy etap uchwały antysmogowej wszedł w życie. Co jest zakazane, jakie grożą kary i gdzie szukać dofinansowania."
 ---
 
 Zgodnie z **uchwałą antysmogową Sejmiku Województwa Śląskiego z 7 kwietnia 2017 r.
 (nr V/36/1/2017)** od **1 stycznia 2026 r.** obowiązuje zakaz użytkowania kotłów
 na paliwa stałe, które nie spełniają wymogów emisyjnych.
+
+![Kopciuch dymiący nad ulicą w Mysłowicach](/prace/news-kopciuch.jpg)
 
 ## Czego dotyczy zakaz
 

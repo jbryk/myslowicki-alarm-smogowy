@@ -1,7 +1,7 @@
 ---
 tytul: "Pożegnanie z kopciuchem"
 data: 2026-01-02
-obraz: "/okladki/kotly.svg"
+obraz: "/prace/news-kopciuch.jpg"
 opis: "Od 1 stycznia 2026 r. użytkowanie kopciuchów na terenie całego woj. śląskiego jest niezgodne z prawem — bez wyjątków i bez taryfy ulgowej."
 autor: "Jerzy Bryk, Mysłowicki Alarm Smogowy"
 ---
@@ -17,6 +17,8 @@ Nie chodzi już o przekonywanie, że kopciuch szkodzi zdrowiu. Teraz chodzi o to
 za znaczną część emisji pyłów i rakotwórczego benzo(a)pirenu w sezonie grzewczym.
 Dzięki konsekwentnym działaniom mieszkańców i samorządu Mysłowice udowadniają, że
 skuteczna walka o czyste powietrze jest możliwa.
+
+![Dym z komina nad ulicą w Mysłowicach](/prace/news-kopciuch.jpg)
 
 ## To była kwestia zdrowia
 

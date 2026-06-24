@@ -1,7 +1,7 @@
 ---
 tytul: "Gmina może nakazać wymianę kopciucha. Czas dobrowolności się skończył"
 data: 2026-01-13
-obraz: "/okladki/kotly.svg"
+obraz: "/prace/news-billboard.jpg"
 opis: "Po latach kampanii i dotacji nadszedł moment egzekwowania prawa. Samorządy mają skuteczne narzędzie — art. 363 Prawa ochrony środowiska."
 ---
 
@@ -12,6 +12,8 @@ wymianę źródeł ciepła nadszedł moment **egzekwowania prawa**.
 Od 1 stycznia 2026 r. na Śląsku eksploatacja pozaklasowych kotłów jest
 wykroczeniem. Wobec osób, które mimo obowiązujących zakazów nadal świadomie palą
 w „kopciuchach”, samorządy dysponują skutecznym instrumentem.
+
+![Billboard MAS: „Nie pal śmieci, bo ci dron do chałpy wleci”](/prace/news-billboard.jpg)
 
 ## Art. 363 Prawa ochrony środowiska
 
