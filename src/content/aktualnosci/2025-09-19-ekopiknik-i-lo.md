@@ -1,9 +1,13 @@
 ---
 tytul: "Ekopiknik w I LO im. T. Kościuszki"
 data: 2025-09-19
-obraz: "/okladki/wydarzenia.svg"
+obraz: "/prace/ekopiknik-prezentacja.jpg"
 opis: "Spotkanie z mieszkańcami i młodzieżą na ekopikniku w I Liceum Ogólnokształcącym w Mysłowicach."
 ---
+
+![Jerzy Bryk opowiada o smogu — „Co to? Na co? Dlaczego? Po co?”](/prace/ekopiknik-prezentacja.jpg)
+
+![„Jestem eko!” — ekopiknik w I LO im. T. Kościuszki](/prace/ekopiknik-jestem-eko.jpg)
 
 19 września 2025 r. wzięliśmy udział w **ekopikniku w I Liceum Ogólnokształcącym
 im. T. Kościuszki w Mysłowicach**. To była świetna okazja, żeby spotkać się ze
