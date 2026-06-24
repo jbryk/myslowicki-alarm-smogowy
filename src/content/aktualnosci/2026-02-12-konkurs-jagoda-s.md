@@ -9,8 +9,9 @@ autor: "Jagoda S. — praca konkursowa"
 Praca zgłoszona w konkursie **„Smog pod lupą!”** Mysłowickiego Alarmu Smogowego —
 w formie **filmu**. Publikujemy ją za zgodą organizatorów; autorka podpisana inicjałem.
 
-Film udostępnimy w tym miejscu po opublikowaniu go na kanale YouTube — tak jak
-nagrania z konferencji „Smogowi mówimy NIE!”.
+Praca w formie filmu:
+
+<div class="short"><iframe src="https://www.youtube-nocookie.com/embed/bRIelXj6hQE" title="Praca konkursowa — film" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ---
 
