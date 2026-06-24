@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="Praca konkursowa Smog pod lupą">
+  <rect width="200" height="200" fill="#10314F"/>
+  <line x1="118" y1="118" x2="158" y2="158" stroke="#ffffff" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="86" cy="86" r="46" fill="#0F75BC"/>
+  <circle cx="86" cy="86" r="46" fill="none" stroke="#ffffff" stroke-width="9"/>
+  <g fill="#ffffff">
+    <circle cx="74" cy="90" r="9" opacity="0.95"/>
+    <circle cx="92" cy="82" r="11" opacity="0.85"/>
+    <circle cx="100" cy="96" r="8" opacity="0.7"/>
+  </g>
+</svg>
