@@ -1,13 +1,16 @@
 ---
 tytul: "Smog pod lupą: Mysłowicki survival (Weronika Z.)"
 data: 2026-02-12
-obraz: "/okladki/konkurs.svg"
+obraz: "/prace/weronika-z-domy.jpg"
 opis: "Praca konkursowa „Smog pod lupą!” — poradnik przetrwania sezonu smogowego w Mysłowicach."
 autor: "Weronika Z. — praca konkursowa"
 ---
 
 Praca zgłoszona w konkursie **„Smog pod lupą!”** Mysłowickiego Alarmu Smogowego.
 Publikujemy ją za zgodą organizatorów; autorka podpisana inicjałem.
+
+![weronika-z-komin.jpg](/prace/Dym z komina przy drodze)
+![weronika-z-domy.jpg](/prace/Smog nad domami)
 
 ## Mysłowicki survival: jak wygrać z „niewidzialnym wrogiem” w cieniu kopalnianych szybów?
 

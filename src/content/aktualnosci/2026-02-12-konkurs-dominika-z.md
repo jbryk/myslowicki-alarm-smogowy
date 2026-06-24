@@ -1,7 +1,7 @@
 ---
 tytul: "Smog pod lupą: Powietrze, którego nie widać (Dominika Z.)"
 data: 2026-02-12
-obraz: "/okladki/konkurs.svg"
+obraz: "/prace/dominika-z-stopsmog.jpg"
 opis: "Praca konkursowa z konkursu „Smog pod lupą!” — o niewidzialnym problemie, który dotyczy nas wszystkich."
 autor: "Dominika Z. — praca konkursowa"
 ---
@@ -9,6 +9,9 @@ autor: "Dominika Z. — praca konkursowa"
 Praca zgłoszona w konkursie **„Smog pod lupą!”**, towarzyszącym akcji edukacyjnej
 Mysłowickiego Alarmu Smogowego. Publikujemy ją za zgodą organizatorów; autorka
 podpisana inicjałem.
+
+![dominika-z-stopsmog.jpg](/prace/Plakat „Stop smog! Mysłowice” — praca konkursowa)
+![dominika-z-eco.jpg](/prace/Ekologiczne nawyki — ilustracja z pracy)
 
 ## Powietrze, którego nie widać — problem, który dotyczy nas wszystkich
 

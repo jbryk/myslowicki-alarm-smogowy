@@ -11,6 +11,9 @@ Publikujemy ją za zgodą organizatorów; autorka podpisana inicjałem.
 
 ![Smog nad Mysłowicami — zdjęcie z pracy konkursowej](/prace/anna-p-myslowice-smog.png)
 
+![anna-p-znak.jpg](/prace/Znak „Mysłowice” i kominy w smogu)
+![anna-p-kosciol.jpg](/prace/Kościół w Mysłowicach spowity smogiem)
+
 ## Zmieńmy razem świadomość o smogu w Mysłowicach
 
 ### Smog nad Mysłowicami. Niewidzialny problem, który dusi miasto

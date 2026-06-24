@@ -1,13 +1,16 @@
 ---
 tytul: "Smog pod lupą: Zmień swoje otoczenie — czas działać! (Zuzanna K.)"
 data: 2026-02-12
-obraz: "/okladki/konkurs.svg"
+obraz: "/prace/zuzanna-k-infografika.jpg"
 opis: "Praca konkursowa „Smog pod lupą!” — walka z mitami o smogu i konkretne powody, by działać już teraz."
 autor: "Zuzanna K. — praca konkursowa"
 ---
 
 Praca zgłoszona w konkursie **„Smog pod lupą!”** Mysłowickiego Alarmu Smogowego.
 Publikujemy ją za zgodą organizatorów; autorka podpisana inicjałem.
+
+![zuzanna-k-smog.jpg](/prace/Smog w Mysłowicach)
+![zuzanna-k-infografika.jpg](/prace/Infografika: jak wspólnie przeciwdziałać zanieczyszczeniu powietrza)
 
 ## Zmień swoje otoczenie: czas działać!
 

@@ -1,13 +1,15 @@
 ---
 tytul: "Smog pod lupą: Smog w Mysłowicach — problem lokalny (Mikołaj K.)"
 data: 2026-02-12
-obraz: "/okladki/konkurs.svg"
+obraz: "/prace/mikolaj-k-smog.jpg"
 opis: "Praca konkursowa „Smog pod lupą!” — rzeczowa analiza skali, przyczyn i skutków smogu w Mysłowicach."
 autor: "Mikołaj K. — praca konkursowa"
 ---
 
 Praca zgłoszona w konkursie **„Smog pod lupą!”** Mysłowickiego Alarmu Smogowego.
 Publikujemy ją za zgodą organizatorów; autor podpisany inicjałem.
+
+![mikolaj-k-smog.jpg](/prace/Smog nad miastem)
 
 ## Smog w Mysłowicach — poważny problem lokalny
 

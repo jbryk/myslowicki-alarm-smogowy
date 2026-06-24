@@ -1,9 +1,9 @@
 ---
-tytul: "Smog pod lupą: praca filmowa (kategoria senior — praca 2)"
+tytul: "Smog pod lupą: praca filmowa (Senior_2)"
 data: 2026-02-12
 obraz: "/okladki/konkurs.svg"
 opis: "Praca konkursowa „Smog pod lupą!” w formie filmu."
-autor: "Praca konkursowa (kategoria senior)"
+autor: "Senior_2 — praca konkursowa"
 ---
 
 Praca zgłoszona w konkursie **„Smog pod lupą!”** Mysłowickiego Alarmu Smogowego —
