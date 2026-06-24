@@ -11,7 +11,7 @@ w formie **filmu**. Publikujemy ją za zgodą organizatorów; autorka podpisana 
 
 Praca w formie filmu:
 
-<div class="short"><iframe src="https://www.youtube-nocookie.com/embed/bRIelXj6hQE" title="Praca konkursowa — film" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+<div class="short"><iframe src="https://www.youtube-nocookie.com/embed/3Bktz4DuTFU" title="Praca konkursowa — film" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ---
 

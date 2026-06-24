@@ -9,7 +9,9 @@ autor: "Senior_3 — praca konkursowa"
 Praca zgłoszona w konkursie **„Smog pod lupą!”** Mysłowickiego Alarmu Smogowego —
 w formie **filmu**. Publikujemy ją za zgodą organizatorów; autor podpisany inicjałem.
 
-Film udostępnimy w tym miejscu po potwierdzeniu poprawnego linku do nagrania na YouTube.
+Praca w formie filmu:
+
+<div class="short"><iframe src="https://www.youtube-nocookie.com/embed/bRIelXj6hQE" title="Praca konkursowa — film" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ---
 
